@@ -1,0 +1,289 @@
+// Overrides for Storyboard child theme
+
+.logo-print {
+  display: none;
+}
+
+.nav-callout {
+  @include media($small) {
+    padding-left: 13rem;
+  }
+  @include media($nav-break2) {
+    padding-left: 1.5rem;
+  }
+  &:hover {
+    .nav-callout__logo {
+      fill: #fff;
+    }
+  }
+  &__logo {
+    fill: $dark-gray;
+    @include media($nav-break) {
+      fill: #fff;
+    }
+  }
+}
+
+.section-primary {
+  padding: $large-spacing 0;
+}
+
+.hero-credit {
+  text-align: right;
+  + .section-primary {
+    padding-top: $base-spacing;
+  }
+}
+
+.hero:empty + .section-primary {
+  padding-top: 3.75rem;
+}
+
+.header-main {
+  border: none;
+}
+
+.section-primary.bracket-align {
+  padding-top: 8.75rem;
+  @include media($large) {
+    padding-top: 3.75rem;
+  }
+}
+
+body.page, body.single {
+  article.page-content {
+    time {
+      color: $medium-dark-gray;
+      font-family: inherit;
+      text-transform: uppercase;
+    }
+  }
+}
+
+h1, .level-1,
+h2, .level-2,
+h3, .level-3,
+h4, .level-4 {
+  margin-bottom: $medium-spacing;
+  font-family: $base-font-family;
+}
+
+.btn {
+  font-family: $base-font-family;
+}
+
+.archive-parent {
+  margin-bottom: 0;
+  &.series {
+    color: $red;
+  }
+}
+
+.archive-title {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.results-title {
+  margin-bottom: $large-spacing;
+}
+
+body.page article.page-content {
+  margin-bottom: 0;
+}
+
+.search article h3 {
+  margin-bottom: 0;
+}
+
+.page-content {
+  &__intro-copy, &__free-form, &__short-form, &__notes, &__body-copy {
+    font-family: $accent-font-family;
+    font-size: 1.1rem;
+    line-height: 1.75;
+    @media print {
+      @include span-columns(12);
+    }
+
+    h1, .level-1,
+    h2, .level-2,
+    h3, .level-3,
+    h4, .level-4 {
+      margin-top: $small-spacing;
+      margin-bottom: $base-spacing;
+    }
+
+    h1, .level-1,
+    h2:first-child {
+      margin-top: 0;
+      margin-bottom: $medium-spacing;
+    }
+  }
+
+  figure.alignleft, figure.alignright {
+    max-width: 50%;
+    margin-bottom: 1rem;
+    @include media($small) {
+      max-width: 100%;
+    }
+  }
+
+  figure.alignnone, figure.aligncenter {
+    margin-bottom: $medium-spacing;
+    padding-top: $small-spacing;
+    + figure.alignnone, + figure.aligncenter {
+      margin-bottom: $base-spacing;
+      padding-bottom: $small-spacing;
+    }
+  }
+
+  figcaption {
+    font-family: $base-font-family;
+  }
+
+  p {
+    margin-bottom: $medium-spacing;
+  }
+
+  &__comments {
+    margin-top: $medium-spacing;
+    @media print {
+      display: none;
+    }
+  }
+
+  &__share-tools {
+    @media print {
+      display: none;
+    }
+  }
+
+  &__category-name {
+    @include span-columns(5);
+    margin-top: $small-spacing;
+    margin-bottom: $large-spacing;
+    @include media($small) {
+      @include span-columns(6);
+      margin-bottom: $base-spacing;
+    }
+  }
+
+  &__category-info {
+    @include span-columns(7);
+    padding: $small-spacing 0;
+    @include media($small) {
+      @include span-columns(6);
+    }
+  }
+
+  .quote {
+    margin: $large-spacing 0;
+    padding: $large-spacing $large-spacing $medium-spacing $large-spacing;
+    border-top: 1px solid $light-medium-gray;
+    border-bottom: 1px solid $light-medium-gray;
+    q {
+      margin-bottom: $small-spacing;
+      font-family: $base-font-family;
+      font-size: 1.5em;
+      font-weight: 800;
+      line-height: 1.2;
+      &:before, &:after {
+        content: "";
+      }
+    }
+    cite {
+      font-style: normal;
+      &:before {
+        content: "—";
+      }
+    }
+  }
+}
+
+.sidebar > .sidebar__signup {
+  margin-top: $extra-large-spacing;
+  margin-bottom: 0;
+}
+
+.post-preview {
+  @media print {
+    display: none;
+  }
+  &__copy {
+    font-family: $accent-font-family;
+  }
+}
+
+.nav-callout {
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+.horizontal-callout.text {
+  margin: 0 0 $large-spacing 0;
+  padding: $large-spacing 36px;
+  @include media($extra-large) {
+    .content {
+      width: 66%;
+      padding-right: 36px;
+    }
+    .action {
+      width: 34%;
+      padding-left: 36px;
+    }
+  }
+  h3 {
+    margin-bottom: $small-spacing;
+  }
+}
+
+.newsletter-signup {
+  width: 100%;
+}
+
+.main-footer .navigation ul {
+  column-count: 1;
+  @include media($small) {
+    text-align: center;
+  }
+  li {
+    display: inline-block;
+    margin-right: 3rem;
+    @include media($small) {
+      margin: 0 2rem;
+    }
+    @include media($extra-small) {
+      margin: 0 0.75rem;
+    }
+  }
+}
+
+@media print {
+  body {
+    margin: 0 6rem;
+  }
+
+  .logo-m {
+    float: left;
+  }
+
+  .logo-print {
+    display: block;
+    float: right;
+    width: 170px;
+    padding-top: 20px;
+  }
+
+  .hero {
+    max-height: 250px;
+  }
+
+  img {
+    max-width: 100% !important;
+    object-position: center;
+  }
+
+  .post-meta {
+    display: none;
+  }
+}

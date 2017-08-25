@@ -1,0 +1,27 @@
+*~
+.DS_Store
+.svn
+.cvs
+*.bak
+*.swp
+Thumbs.db
+.vagrant
+*.pid
+npm-debug.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+composer.phar
+vendor/*
+!vendor/.gitkeep
+
+# 3rd-party libraries/packages
+node_modules
+bower_components
+
+# Build files
+dist

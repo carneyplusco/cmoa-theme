@@ -1,0 +1,79 @@
+body.page {
+  h1 + hr {
+    border-bottom: 3px solid $dark-gray;
+    &:last-child {
+      margin-bottom: $medium-spacing;
+    }
+  }
+
+  article.page-content {
+    margin-bottom: $base-spacing;
+    h2 + hr {
+      width: 25%;
+      margin: 1rem 0 $base-spacing 0;
+      border-width: 3px;
+    }
+
+    .callout {
+      @include span-columns(4);
+      @include omega(3n);
+      margin-top: $medium-spacing;
+      h2 + hr {
+        width: 100%;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          margin-bottom: $small-spacing;
+          line-height: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+body.page, body.single {
+  article.page-content {
+    a:hover {
+      text-decoration: underline;
+    }
+
+    time, address {
+      display: inline-block;
+      font-family: $alt-font-family;
+      text-transform: uppercase;
+      @include media($small) {
+        display: block;
+      }
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    time {
+      text-transform: none;
+    }
+
+    img {
+      height: auto;
+    }
+
+    li {
+      margin-bottom: $small-spacing;
+    }
+  }
+}
+
+body.single-exhibition, body.single-ai1ec_event  {
+  h1 {
+    margin-bottom: $small-spacing;
+    padding-top: $small-spacing;
+  }
+}
+
+.highlight-text {
+  background-color: $highlight;
+}

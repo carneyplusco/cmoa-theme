@@ -1,0 +1,45 @@
+.cmoa-footnotes {
+  margin-top: $base-spacing;
+  margin-bottom: $base-spacing;
+  &__index {
+    top: 0;
+    a {
+      display: inline-block;
+      min-width: 14px;
+      height: 14px;
+      padding: 0 2px;
+      background-color: $medium-dark-gray;
+      color: #fff;
+      text-align: center;
+      font-family: $base-font-family;
+      font-size: 9px;
+      line-height: 14px;
+      vertical-align: 3px;
+      border-radius: 8px;
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+  &__heading {
+    @extend .level-3;
+  }
+  &__note {
+    margin-bottom: $small-spacing;
+    font-size: 0.875rem;
+    &:target {
+      background-color: $highlight;
+    }
+  }
+  &__return-link {
+    font-family: $base-font-family;
+    font-size: 0.6875rem;
+  }
+  &__tooltip {
+    padding: 8px;
+    max-width: 400px;
+    font-family: $base-font-family;
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+}

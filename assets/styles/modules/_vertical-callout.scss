@@ -1,0 +1,94 @@
+// columns of equal height with a fixed width gutter (default 3 columns)
+
+.vertical-callout-group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  @include media($small) {
+    flex-direction: column;
+  }
+}
+
+.vertical-callout {
+  @include span-columns(4);
+  position: relative;
+  background: $gold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: $large-spacing;
+  overflow: hidden;
+
+  @include media($small) {
+    display: block;
+    width: 100%;
+    margin-bottom: $base-spacing;
+  }
+
+  h4 {
+    margin-bottom: $small-spacing;
+  }
+
+  hr {
+    width: 50%;
+  }
+
+  .content {
+    position: relative;
+    padding: $base-spacing;
+    overflow: hidden;
+    z-index: 2;
+
+    @include media($medium) {
+
+    }
+  }
+
+
+  .bg-image {
+    align-self: flex-end;
+    display: block;
+    flex: 0 0 auto;
+    vertical-align: bottom;
+    width: 100%;
+    display: block;
+
+    @include media($small) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: .2;
+      // z-index: -1;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+
+    }
+
+  }
+}
+
+
+// color options
+////////////////////////////////////////////////////////////////////////////////
+.vertical-callout.teal {
+  background: $teal;
+}
+
+.vertical-callout.cadet {
+  @extend %inverse;
+  background: $cadet;
+}
+
+.vertical-callout.red {
+  @extend %inverse;
+  background: $red;
+}
+
+.vertical-callout.charcoal {
+  @extend %inverse;
+  background: $charcoal;
+}

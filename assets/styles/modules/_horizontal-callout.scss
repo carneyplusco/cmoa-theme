@@ -1,0 +1,256 @@
+.horizontal-callout {
+  @include clearfix;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  min-height: 12em;
+  margin-bottom: $large-spacing;
+  border: $base-border;
+  overflow: hidden;
+
+  @include media($small) {
+    width: auto;
+    margin-left: $base-spacing;
+    margin-right: $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+
+  h4, .level-4 {
+    margin-bottom: $small-spacing;
+  }
+
+  .content {
+    position: relative;
+    width: 67%;
+    align-self: center;
+    padding-right: $base-spacing;
+    border-right: $base-border;
+
+    @include media($small) {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: $base-spacing;
+      border-right: none;
+      text-align: center;
+
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .action {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    width: 33%;
+    padding-left: $base-spacing;
+
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+
+    @include media($small) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    p {
+      font-size: 1em;
+      line-height: 1.2;
+    }
+  }
+
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+// Photo overlay version
+////////////////////////////////////////////////////////////////
+
+.horizontal-callout.photo-overlay {
+  cursor: pointer;
+
+  .action {
+    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    padding: 0 $base-spacing 0 ($base-spacing*2);
+    color: $dark-gray;
+    background: rgba($gold, .8);
+    transition: all .5s;
+    transform: translateX(-$base-spacing);
+
+    @include media($medium) {
+      width: 90%;
+    }
+    @include media($small) {
+      width: 100%;
+      padding-left: $base-spacing;
+      transform: translateX(0);
+    }
+  }
+
+  &:hover {
+    .action {
+      transform: translateX(0);
+    }
+  }
+}
+
+.horizontal-callout.photo-overlay.teal {
+  .action {
+    background: rgba($teal, .8);
+  }
+}
+
+.horizontal-callout.photo-overlay.red {
+  @extend %inverse;
+
+  .action {
+    background: rgba($red, .8);
+  }
+}
+
+.horizontal-callout.photo-overlay.cadet {
+  @extend %inverse;
+
+  .action {
+    background: rgba($cadet, .8);
+  }
+}
+
+
+.horizontal-callout.photo-overlay.charcoal {
+  @extend %inverse;
+
+  .action {
+    background: rgba($charcoal, .8);
+  }
+}
+
+// storyboard version
+////////////////////////////////////////////////////////////////
+.horizontal-callout.storyboard {
+  flex-wrap: nowrap;
+  // max-height: 210px;
+  @include media($small) {
+    display: block;
+    max-height: none;
+    background-color: rgba(#000, .25)
+  }
+  .action {
+    flex: 0 0 30%;
+    padding-left: $base-spacing;
+    @include media($small) {
+      position: absolute;
+      height: 100%;
+    }
+    .callout {
+      @include media($small) {
+        display: none;
+      }
+      h2 {
+        color: #fff;
+      }
+      a.btn {
+        font-size: 0.875em;
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+  .post_lead {
+    position: relative;
+    padding: $base-spacing $large-spacing $small-spacing $large-spacing;
+    @include media($small) {
+      padding: $base-spacing;
+    }
+    h2 {
+      display: none;
+      @include media($small) {
+        display: block;
+        color: #fff;
+      }
+    }
+    h3 {
+      font-family: $accent-font-family;
+      font-weight: 100;
+      @include media($nav-break) {
+        font-size: 1.5rem;
+      }
+      a {
+        color: $dark-gray;
+        &:hover {
+          color: $red;
+        }
+        @include media($small) {
+          color: #fff;
+        }
+      }
+    }
+    p {
+      @include media($small) {
+        color: #fff;
+      }
+    }
+  }
+  .storyboard__more-link {
+    @include media($small) {
+      display: inline-block;
+      padding: 0 4px;
+      font-size: 80%;
+      background-color: #fff;
+    }
+  }
+}
+
+.horizontal-callout.text {
+  padding: $base-spacing;
+}
+
+.horizontal-callout.sponsorship {
+  display: block;
+  padding: 1.5rem;
+  .sponsorship-images {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: $base-spacing;
+    overflow: hidden;
+    img {
+      margin-right: $medium-spacing;
+      margin-bottom: $base-spacing;
+      max-height: 133px;
+
+      @include media($small) {
+        max-height: 100px;
+      }
+      @include media($extra-small) {
+        max-height: none;
+        @include span-columns(3);
+        @include omega(2n);
+
+      }
+    }
+  }
+  *:last-child {
+    margin-bottom: 0;
+  }
+}

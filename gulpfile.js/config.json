@@ -1,0 +1,75 @@
+{
+  "root": {
+    "src": "./assets",
+    "dest": "./dist"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "proxy": "http://localhost",
+      "notify": false
+    },
+
+    "static": {
+      "src": "../../**",
+      "dest": "./",
+      "extensions": ["php"]
+    },
+
+    "js": {
+      "src": "scripts",
+      "dest": "scripts",
+      "extractSharedJs": true,
+      "entries": {
+        "cmoa": ["./themes/cmoa/main.js"],
+        "special_projects": ["./themes/special_projects/main.js"],
+        "nexus": ["./themes/nexus/main.js"],
+        "storyboard": ["./themes/storyboard/main.js"],
+        "summer_camps": ["./themes/summer_camps/main.js"]
+      },
+      "extensions": ["js"]
+    },
+
+    "css": {
+      "src": "styles",
+      "dest": "styles",
+      "autoprefixer": {
+        "browsers": ["last 3 version"]
+      },
+      "sass": {
+        "indentedSyntax": true
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "gif"]
+    },
+
+    "svg": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["svg"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "utility",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "bower": {
+      "src": "./bower_components",
+      "dest": "bower_components"
+    }
+  }
+}

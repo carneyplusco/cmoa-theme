@@ -1,0 +1,89 @@
+{
+  "name": "cmoa",
+  "license": "MIT",
+  "description": "Composer packages for CMOA",
+  "homepage": "https://www.cmoa.org",
+  "authors": [
+    {
+      "name": "Carney Dev Team",
+      "email": "dev.team@carney.co",
+      "homepage": "https://carney.co"
+    },
+    {
+      "name": "Carnegie Museum of Art",
+      "email": "info@cmoa.org",
+      "homepage": "https://github.com/cmoa"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "repositories":[
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/cmoa/wp-static-data"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/cmoa/wp-museum-calendar"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/carneyplusco/wordpress-add-blog-id"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/carneyplusco/cmoa-footnotes"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "carneyplusco/shortcodes-ultimate",
+        "version": "1.0.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/carneyplusco/shortcodes-ultimate/archive/cmoa.zip"
+        },
+        "require" : {
+          "composer/installers": "~1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "roots/wp-password-bcrypt": "^1.0.0",
+    "monolog/monolog": "^1.21",
+    "wpackagist-plugin/advanced-custom-fields-nav-menu-field": "^2.0.0",
+    "wpackagist-plugin/all-in-one-event-calendar": "^2.5.11",
+    "wpackagist-plugin/cms-tree-page-view": "^1.3.4",
+    "wpackagist-plugin/contact-form-7": "^4.5",
+    "wpackagist-plugin/edit-flow": "^0.8.2",
+    "wpackagist-plugin/elasticpress": "^2.0.1",
+    "wpackagist-plugin/enhanced-media-library": "^2.3.1",
+    "wpackagist-plugin/members": "^1.1.2",
+    "wpackagist-plugin/rest-api": "^2.0-beta13",
+    "wpackagist-plugin/safe-redirect-manager": "^1.7.8",
+    "wpackagist-plugin/wufoo-shortcode": "^1.43",
+    "wpackagist-plugin/post-thumbnail-editor": "^2.4.8",
+    "wpackagist-plugin/regenerate-thumbnails": "^2.2.6",
+    "wpackagist-plugin/taxonomy-terms-order": "^1.4.9",
+    "wpackagist-plugin/access-monitor": "^1.1.8",
+    "wpackagist-plugin/open-graph-protocol-framework": "^1.2.1",
+    "wpackagist-plugin/user-switching": "^1.0.9",
+    "carneyplusco/wordpress-add-blog-id": "dev-master",
+    "carneyplusco/shortcodes-ultimate": "1.0.0",
+    "carneyplusco/cmoa-footnotes": "^1.0.0",
+    "cmoa/wp-static-data": "^1.0.0",
+    "cmoa/wp-museum-calendar": "^1.0.0"
+  },
+  "extra": {
+    "installer-paths": {
+      "../../plugins/{$name}/": ["type:wordpress-plugin"]
+    }
+  }
+}

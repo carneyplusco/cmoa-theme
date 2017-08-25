@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Adults",
+    "cost": "$19.95"
+  },
+  {
+    "type": "Adults 65 and over",
+    "cost": "$14.95"
+  },
+  {
+    "type": "Students with ID",
+    "cost": "$11.95"
+  },
+  {
+    "type": "Children 3 to 18",
+    "cost": "$11.95"
+  },
+  {
+    "type": "Children 2 and Under",
+    "cost": "Free"
+  },
+  {
+    "type": "Members",
+    "cost": "Free"
+  },
+  {
+    "type": "Access Card Holders",
+    "cost": "$1.00"
+  }
+]

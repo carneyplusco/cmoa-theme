@@ -1,0 +1,307 @@
+.bracket-callout {
+  @include clearfix;
+  @include span-columns(6);
+  position: relative;
+  margin-bottom: $large-spacing;
+  cursor: pointer;
+
+  @include media($small) {
+    @include span-columns(12);
+  }
+
+  svg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include media($small) {
+      width: 50%;
+      transform: rotate(-90deg) !important;
+
+    }
+  }
+
+  path {
+    fill: $gold;
+  }
+
+}
+
+.bracket-callout--info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66%;
+  height: 66%;
+  transition: all .4s;
+
+  @include media($small) {
+    position: relative;
+    top: 0 !important;
+    left:0 !important;
+    margin-top: -33%;
+    width: 75%;
+  }
+
+  .copy {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding: $base-spacing;
+
+
+
+    @include media($large) {
+      line-height: 1;
+    }
+
+    @include media($small) {
+      position: relative;
+      padding: $small-spacing 0 0 0;
+      text-align: left !important;
+    }
+  }
+
+  .title {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .author {
+    position: relative;
+    margin: 0;
+  }
+
+  .date {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+  }
+}
+
+.bracket-callout--image {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 15% 0.0% 0 15%;
+  box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+  // border: solid 6px $light-gray;
+  transition: all .4s;
+  overflow: hidden;
+  transform: none;
+
+  @include media($small) {
+    margin: 0 !important;
+  }
+
+  img {
+    display: block;
+  }
+
+}
+
+.bracket-callout--action {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: $small-spacing;
+  color: #fff;
+  text-align: center;
+  font-family: $alt-font-family;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: rgba(#000, .5);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all .4s;
+
+  @include media($small) {
+    right: 0;
+    left: auto;
+    display: inline-block;
+    width: auto;
+    opacity: 1;
+    text-align: right;
+    top: auto !important;
+    bottom: 0 !important;
+    transform: none !important;
+
+  }
+}
+
+// default hover state
+////////////////////////////////////////////////////////////////////////////////
+.bracket-callout:hover {
+  z-index: 99;
+
+  .bracket-callout--info {
+    transform: translateY(-15%) translateX(-15%) scale(.7);
+    opacity: .8;
+
+    @include media($small) {
+      transform: none !important;
+      opacity: 1 !important;
+    }
+  }
+
+  .bracket-callout--image {
+    transform: scale(1.05);
+    box-shadow: 0 4px 25px 0 rgba(0,0,0,.4);
+
+    @include media($small) {
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .bracket-callout--action {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// position options
+////////////////////////////////////////////////////////////////////////////////
+
+.bracket-callout.top-right {
+
+  &:hover {
+    .bracket-callout--info {
+      transform: translateY(-15%) translateX(15%) scale(.7);
+      opacity: .8;
+    }
+  }
+
+  .bracket-callout--image {
+    margin: 15% 15% 0 0.0%;
+  }
+
+  .bracket-callout--info {
+    right: 0;
+    left: auto;
+  }
+
+  .copy {
+    text-align: right;
+  }
+
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.bracket-callout.bottom-right {
+
+  &:hover {
+    .bracket-callout--info {
+      transform: translateY(15%) translateX(15%) scale(.7);
+      opacity: .8;
+    }
+
+    .bracket-callout--action {
+      transform: translateY(0);
+    }
+  }
+
+  .bracket-callout--action {
+    top: 0;
+    bottom: auto;
+    transform: translateY(-100%);
+  }
+
+  .bracket-callout--image {
+    margin: 0 15% 15% 0.0%;
+  }
+
+  .bracket-callout--info {
+    right: 0;
+    left: auto;
+    bottom: 0;
+    top: auto;
+  }
+
+  .copy {
+    top: auto;
+    bottom: 0;
+    text-align: right;
+  }
+
+  svg {
+    transform: rotate(-180deg);
+  }
+}
+
+
+.bracket-callout.bottom-left {
+
+  &:hover {
+    .bracket-callout--info {
+      transform: translateY(15%) translateX(-15%) scale(.7);
+      opacity: .8;
+    }
+
+    .bracket-callout--action {
+      transform: translateY(0);
+    }
+  }
+
+  .bracket-callout--action {
+    top: 0;
+    bottom: auto;
+    transform: translateY(-100%);
+  }
+
+  .bracket-callout--image {
+    margin: 0 0.0% 15% 15%;
+  }
+
+  .bracket-callout--info {
+    right: auto;
+    left: 0;
+    bottom: 0;
+    top: auto;
+  }
+  .copy {
+    top: auto;
+    bottom: 0;
+  }
+
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+
+// color options
+////////////////////////////////////////////////////////////////////////////////
+.bracket-callout.red {
+  color: #fff;
+  @include media($small) {
+    color: $base-font-color;
+  }
+
+  path {
+    fill: $red;
+  }
+}
+
+.bracket-callout.teal {
+
+  path {
+    fill: $teal;
+  }
+}
+
+.bracket-callout.cadet {
+  color: #fff;
+  @include media($small) {
+    color: $base-font-color;
+  }
+
+
+  path {
+    fill: $cadet;
+  }
+}

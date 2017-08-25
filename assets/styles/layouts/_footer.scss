@@ -1,0 +1,123 @@
+.main-footer {
+  padding-top: $medium-spacing;
+  margin-bottom: $large-spacing;
+  border-top: 1px solid $light-medium-gray;
+  overflow: hidden;
+  @include media($large) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+    margin-bottom: $base-spacing;
+  }
+
+  small {
+    display: inline-block;
+    line-height: 1.25em;
+  }
+
+  section {
+    @include media($medium) {
+      @include omega(3n);
+    }
+    @include media($small) {
+      @include omega(2n);
+    }
+  }
+
+  .logo {
+    @include span-columns(2);
+    @include media($medium) {
+      @include span-columns(2);
+    }
+    @include media($small) {
+      @include span-columns(2);
+    }
+    path {
+      fill: $red;
+    }
+  }
+
+  .location {
+    @include span-columns(2);
+    @include media($medium) {
+      @include span-columns(4);
+    }
+    @include media($small) {
+      @include span-columns(4);
+    }
+  }
+
+  .navigation {
+    @include span-columns(5);
+    @include media($medium) {
+      @include span-columns(6);
+    }
+    @include media($small) {
+      @include span-columns(6);
+      margin-top: $medium-spacing;
+    }
+    @include media($extra-small) {
+      margin-top: $small-spacing;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      column-count: 3;
+      @include media($extra-small) {
+        column-count: 2
+      }
+      li a {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .legal {
+    margin-top: $small-spacing;
+    text-align: center;
+    a {
+      margin-left: 0.5em;
+      &:before {
+        @extend %square-bullet;
+        width: 4px;
+        height: 4px;
+        margin: 0 8px 0 2px;
+      }
+    }
+  }
+
+  .social {
+    @include span-columns(3);
+    @include media($medium) {
+      @include span-columns(12);
+      margin-top: $small-spacing;
+      text-align: center;
+    }
+  }
+
+  .social ul.links {
+    list-style: none;
+    margin: 0.25em 0 1.5em 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      a {
+        display: block;
+        line-height: 0;
+        font-size: 1.25em;
+        background: tint($medium-gray, 33%);
+        color: #fff;
+        padding: 10px;
+        margin-right: 4px;
+        border-radius: 20px;
+        text-align: center;
+        &:hover {
+          background: $medium-gray;
+        }
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

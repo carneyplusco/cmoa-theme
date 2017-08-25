@@ -1,0 +1,48 @@
+.entry {
+  margin-bottom: $medium-spacing;
+  overflow: hidden;
+
+  &__image {
+    @include span-columns(5);
+    @include media($small) {
+      @include span-columns(6);
+      margin-bottom: $small-spacing;
+    }
+  }
+
+  &__summary {
+    @include span-columns(7);
+    @include media($small) {
+      @include span-columns(6);
+    }
+    p.post-preview__copy {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: $small-spacing;
+    line-height: 1.2;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__byline {
+    margin-bottom: $medium-spacing;
+    line-height: 1;
+    @include media($small) {
+      margin-bottom: $base-spacing;
+    }
+    .post-preview__cite, .post-preview__date {
+      margin-bottom: 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

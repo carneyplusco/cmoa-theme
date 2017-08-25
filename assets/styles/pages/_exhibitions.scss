@@ -1,0 +1,149 @@
+.exhibitions-list {
+  .exhibition {
+    margin-bottom: $large-spacing;
+    overflow: hidden;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include media($small) {
+      position: relative;
+      padding-top: $medium-spacing;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: $base-spacing;
+      @include media($small) {
+        margin-bottom: 0;
+      }
+    }
+    .details {
+      padding-left: 0;
+      @include media($small) {
+        padding-top: $small-spacing;
+      }
+    }
+  }
+  .chip {
+    @include media($small) {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.upcoming-list {
+  .upcoming--item {
+    margin-bottom: $large-spacing;
+    &:last-child {
+      margin-bottom: $medium-spacing;
+    }
+    h2 {
+      margin-top: $small-spacing;
+      font-family: $accent-font-family;
+      font-weight: 400;
+      line-height: 1.1;
+      a {
+        color: $dark-gray;
+        &:hover {
+          color: tint($dark-gray, 10%);
+        }
+      }
+    }
+    a.item--image {
+      display: block;
+      img {
+        display: block;
+        height: auto;
+      }
+    }
+    .dates {
+      @extend %chip;
+      display: block;
+      width: auto;
+      margin-bottom: 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+body.single-exhibition {
+  time {
+    + address:before {
+      @extend %square-bullet;
+      margin: 0 4px 0 2px;
+      @include media($small) {
+        display: none;
+        content: "";
+        margin: 0;
+      }
+    }
+  }
+  a.map-link {
+    font-family: $base-font-family;
+    text-transform: none;
+  }
+
+  .exhibition-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .item {
+      @include span-columns(4);
+      @include omega(3n);
+      position: relative;
+      margin-bottom: $base-spacing;
+      border: 1px solid $light-medium-gray;
+      @include media($small) {
+        @include span-columns(3);
+        @include omega-reset(3n, 12);
+        @include omega(2n);
+      }
+      @include media($extra-small) {
+        @include span-columns(6);
+      }
+      a.image {
+        position: relative;
+        z-index: 1;
+      }
+      img {
+        vertical-align: middle;
+      }
+    }
+    .credit-link {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: block;
+      padding: 0.65rem $small-spacing 0.15rem;
+      background-color: #fff;
+      color: $medium-dark-gray;
+      font-size: 0.875rem;
+      z-index: 999;
+      cursor: pointer;
+      &:hover, &:focus {
+        text-decoration: none;
+        + .credits {
+          opacity: 0.8;
+          z-index: 99;
+        }
+      }
+    }
+    .credits {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: $small-spacing;
+      background: #fff;
+      opacity: 0;
+      transition: opacity 0.2s ease-out;
+    }
+  }
+  .featherlight-next span, .featherlight-previous span {
+    text-shadow: none;
+  }
+}

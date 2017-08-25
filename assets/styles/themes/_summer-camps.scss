@@ -1,0 +1,171 @@
+// Overrides for Summer Camps child theme
+
+$orange: #f58220;
+$lime: #8dc63f;
+$french-blue: #0072bc;
+$sunset-yellow: #fdb913;
+$black: #000;
+
+.header-main {
+  border: none;
+}
+
+.logo-l, .logo-m, .logo-s {
+  background-color: #fff;
+  path:nth-child(1) {
+    fill: #000 !important;
+  }
+}
+
+.logo-l {
+  width: 600px;
+  height: 40px;
+  padding: 22px 30px 0 30px;
+}
+
+.logo-m {
+  width: 400px;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.logo-s {
+  width: auto;
+  max-height: 150px;
+  overflow: hidden;
+  svg {
+    width: 100%;
+  }
+  path {
+    fill: inherit !important;
+  }
+}
+
+h1, .level-1,
+h2, .level-2,
+h3, .level-3,
+h4, .level-4,
+h5, .level-5 {
+  font-weight: 100;
+}
+
+.home .hero + section.section-primary {
+  padding-top: 0;
+}
+
+.chip-callout {
+  &.chip-callout-featured {
+    .content {
+      margin-left: 0;
+      @include media($small) {
+        padding: $base-spacing;
+      }
+      .intro {
+        font-family: $alt-font-family;
+        @include media($small) {
+          margin-bottom: $base-spacing;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        h1 {
+          margin-top: 0.25rem;
+          margin-bottom: 0.25rem;
+          line-height: 1;
+        }
+        h2 {
+          margin-top: 0;
+          margin-bottom: $base-spacing;
+        }
+        h1, h2, h3 {
+          font-weight: 400;
+        }
+      }
+    }
+    .description {
+      align-self: flex-start;
+    }
+  }
+  .location {
+    color: $medium-dark-gray;
+  }
+}
+
+.chip-callout--info, .events-list .chip {
+  @each $color_name, $color_var in (orange: $orange, green: $lime, blue: $french-blue, yellow: $sunset-yellow, black: $black) {
+    &.#{$color_name} {
+      background-color: $color_var;
+    }
+  }
+
+  @each $color_name in (blue, black) {
+    &.#{$color_name} {
+      @extend %inverse;
+    }
+  }
+}
+
+.chip-callout h4, .horizontal-callout h4 {
+  font-weight: 800;
+  a {
+    color: $medium-dark-gray;
+  }
+}
+
+.featured-camps {
+  &__header {
+    margin-bottom: $base-spacing;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}
+
+.container .calendar-controls {
+  margin-top: $small-spacing;
+  margin-bottom: $small-spacing;
+}
+
+#react-week-picker {
+  z-index: 4;
+}
+
+#react-event-filter {
+  z-index: 3;
+}
+
+.container .calendar-controls__wrapper {
+  @include span-columns(4);
+  font-size: 0.875em;
+
+  @include media($small) {
+    @include span-columns(6);
+  }
+
+  .event-filter {
+    margin-bottom: 1rem;
+  }
+}
+
+nav.pagination {
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+}
+
+.main-footer .location p {
+  font-size: 80%;
+}
+
+.search {
+  article {
+    margin-bottom: $medium-spacing;
+  }
+  .entry-title {
+    font-family: $accent-font-family;
+    a {
+      color: #000;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

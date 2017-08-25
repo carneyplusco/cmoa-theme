@@ -1,0 +1,31 @@
+// @EXTENDS
+////////////////////////////////////////////////////////////////////////////////
+
+%chip {
+  width: 100px;
+  padding: $small-spacing 1rem;
+  font-size: 0.9375em;
+  font-family: $alt-font-family;
+  line-height: 1.2em;
+
+  @each $color_name, $color_var in (teal: $teal, cadet: $cadet, red: $red, gold: $gold, charcoal: $charcoal) {
+    &.#{$color_name} {
+      background-color: $color_var;
+    }
+  }
+
+  @each $color_name in (cadet, red, charcoal) {
+    &.#{$color_name} {
+      @extend %inverse;
+    }
+  }
+}
+
+%square-bullet {
+  display: inline-block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: $medium-dark-gray;
+  vertical-align: 2px;
+}

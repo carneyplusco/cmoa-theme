@@ -1,0 +1,183 @@
+.tab-container {
+  position: relative;
+  max-width: none;
+  z-index: 99;
+}
+
+.tabs {
+  @include clearfix;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  left: 0;
+  bottom: 0;
+  padding-left: $extra-large-spacing - $large-spacing;
+  font-size: .9em;
+  z-index: 99;
+  width: 100%;
+  background: $light-gray;
+
+  @include media($nav-break) {
+    padding: 0 $small-spacing;
+    justify-content: flex-end;
+    border-right: none;
+    border-left: none;
+  }
+
+  @include media($small) {
+    position: relative;
+  }
+
+  .container {
+    @include media($nav-break) {
+      padding: 0;
+    }
+  }
+
+  li {
+    position: relative;
+    display: block;
+    float: right;
+
+  }
+
+  a,
+  button {
+    position: relative;
+    display: block;
+    color: #000;
+    font-family: $base-font-family;
+    font-weight: 200;
+    padding: $small-spacing;
+    transition: all .3s;
+
+  }
+}
+
+.tabs--links {
+    @include clearfix;;
+    display: block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    float: left;
+
+  li {
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  a:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: solid 3px $red;
+    content: '';
+    opacity: 0;
+    transition: all .2s;
+  }
+
+  .current-menu-item  a:before {
+    opacity: 1 !important;
+  }
+
+  a:hover:before {
+    opacity: .25;
+  }
+
+}
+
+.tabs--overflow {
+  position: relative;
+  display: none;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  float: left;
+
+
+  li {
+    width: 100%;
+    text-align: right;
+    transition: all .3s;
+
+    &:hover {
+      // background: darken($light-gray, 10%);
+    }
+  }
+}
+
+.tabs--menu {
+  &:after {
+    content: url('../images/carat.svg');
+    display: inline-block;
+    width: .6em;
+    margin-left: 4px;
+    transition: all .3s;
+  }
+}
+
+.tabs--dropdown {
+  position: absolute;
+  right: 0;
+  max-height: 0;
+  min-width: 250px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,.25);
+  border: $base-border;
+  border-width: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 5px;
+  transform: translateY(-4px);
+
+  li {
+    background: #fff;
+
+    +li {
+      border-top: $base-border;
+    }
+
+    &:hover {
+      background: $light-gray;
+    }
+  }
+}
+
+.tabs--bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .3;
+  overflow: hidden;
+
+
+  img {
+    position: absolute;
+    left: -2%;
+    top: -5%;
+    width: 104%;
+    max-width: none;
+    filter: blur(5px);
+
+  }
+}
+
+
+// active states
+
+.tabs--overflow:hover  .tabs--dropdown {
+  opacity: 1;
+  border-width: 1px;
+  max-height: 1000px;
+}
+
+.tabs--overflow.is-active {
+  display: inline-block;
+}

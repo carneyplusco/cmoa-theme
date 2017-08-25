@@ -1,0 +1,44 @@
+// SECTION LAYOUTS
+////////////////////////////////////////////////////////////////////////////////
+ [class^=section] {
+  @include clearfix;
+  position: relative;
+  padding: $large-spacing 0;
+  background:  $base-background-color;
+  z-index: 1;
+
+  @include media($small) {
+    padding: $base-spacing 0;
+  }
+}
+
+.section-primary {
+  background:  $base-background-color;
+
+  + .section-primary {
+    padding-top: 0;
+  }
+}
+
+.section-secondary {
+  @extend %inverse;
+  background: $secondary-background-color;
+}
+
+.section-gold {
+  background:  $gold;
+}
+
+.section-teal {
+  background:  $teal;
+}
+
+.section-cadet {
+  @extend %inverse;
+  background:  $cadet;
+}
+
+.section-red {
+  @extend %inverse;
+  background:  $red;
+}

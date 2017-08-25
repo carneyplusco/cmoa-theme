@@ -1,0 +1,272 @@
+.post-preview {
+  &__title {
+    padding-bottom: 0;
+    margin-bottom: 0.33rem;
+    line-height: 1.2;
+    a {
+      color: $dark-gray;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+    margin-bottom: $base-spacing;
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+
+  &__category {
+    &.-inline {
+      display: inline-block;
+    }
+    &.topics a {
+      background-color: $dark-gray;
+      &:hover {
+        background-color: $medium-dark-gray;
+      }
+    }
+    a {
+      @extend .btn;
+      padding: $small-spacing;
+      font-family: $base-font-family;
+      font-size: 0.875rem;
+    }
+  }
+
+  &__byline {
+    padding: 0 0 $base-spacing 0;
+    .post-preview__cite, .post-preview__date {
+      margin-bottom: 0;
+    }
+  }
+
+  &__cite {
+    display: inline-block;
+    margin: 0;
+    padding-top: 0;
+    color: $medium-dark-gray;
+    font-weight: 400;
+    text-transform: none;
+    vertical-align: bottom;
+    text-transform: uppercase;
+
+    + .post-preview__date {
+      margin-left: $small-spacing;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    margin: 0;
+    font-weight: 400;
+    vertical-align: bottom;
+  }
+
+  &__dept {
+    font-weight: 400;
+    text-transform: none;
+  }
+
+  &__categories {
+    margin-bottom: $base-spacing;
+    padding-top: $small-spacing;
+    a {
+      padding: $small-spacing;
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      background-color: $red;
+      &:hover {
+        background-color: $dark-gray;
+        text-decoration: none !important; // bem-ify from _internal.scss
+      }
+    }
+    &.topics a {
+      background-color: $dark-gray;
+      &:hover {
+        background-color: $medium-dark-gray;
+      }
+    }
+  }
+
+  &__tags a {
+    padding: 0 $small-spacing $small-spacing 0;
+  }
+
+  &__copy {
+    padding-bottom: $small-spacing;
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+}
+
+// grid setup - might need some magic pinterest style grid ???
+////////////////////////////////////////////////////////////////
+.post-preview-grid {
+  @include clearfix;
+  padding-top: $small-spacing;
+  .post-preview {
+    &-wrapper {
+      @include span-columns(6);
+      @include omega(2n);
+      padding-bottom: $base-spacing;
+      @include media($small) {
+        @include span-columns(6);
+      }
+    }
+
+    &__image {
+      position: relative;
+    }
+
+    &__title {
+      margin-bottom: $small-spacing;
+    }
+
+    &__category {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__byline {
+      line-height: 1.1;
+    }
+
+    &__copy {
+      padding-bottom: $small-spacing;
+    }
+  }
+}
+
+body.page .post-preview-grid .post-preview { // bem-ify this (_internal.scss)
+  margin-bottom: $small-spacing;
+}
+
+
+// bottom callout version
+////////////////////////////////////////////////////////////////
+.post-preview-callouts {
+  @include clearfix;
+
+  .post-preview {
+    @include span-columns(4);
+    padding-bottom: $base-spacing;
+    @include media($small) {
+      @include span-columns(6);
+    }
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+    &__image {
+      position: relative;
+    }
+
+    &__category {
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__byline {
+      display: flex;
+      margin-top: 8px;
+      padding-bottom: $small-spacing;
+      @include media($large) {
+        display: block;
+        margin-top: 0;
+      }
+    }
+
+    &__date {
+      flex-shrink: 0;
+      display: block;
+      margin-left: 0;
+      @include media($extra-large) {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: $small-spacing;
+      }
+      @include media($large) {
+        margin-top: $small-spacing / 2;
+      }
+      @include media($small) {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: $small-spacing;
+      }
+      @include media($extra-small) {
+        display: block;
+        margin-top: $small-spacing / 2;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// top featured version
+////////////////////////////////////////////////////////////////
+.post-preview-featured {
+  @include clearfix;
+
+  .post-preview {
+    @include span-columns(8);
+    margin-right: 0;
+    padding: 0 6rem;
+
+    @include media($extra-large) {
+      padding: 0 4.5rem;
+    }
+
+    @include media($large) {
+      padding: 0 4.5rem;
+    }
+
+    @include media($medium) {
+      @include span-columns(12);
+      padding: 0 2rem;
+    }
+
+    @include media($small) {
+      padding: 0 0.5rem;
+    }
+
+    &__title {
+      font-size: 2.75em;
+      margin-top: 0;
+      margin-bottom: $small-spacing;
+      line-height: 1.1;
+    }
+
+    &__category {
+      position: relative;
+      margin: 0 0 $base-spacing 0;
+      transform: none;
+    }
+
+    &__copy {
+      padding-bottom: 0;
+    }
+
+    &__byline {
+      padding-bottom: $large-spacing;
+      line-height: 1.25;
+    }
+  }
+
+  .sidebar--storyboard h2 {
+    margin-bottom: $base-spacing;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}

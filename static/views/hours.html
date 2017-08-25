@@ -1,0 +1,24 @@
+{{#hours}}
+  <table>
+    <caption class="screen-reader-text">{{{heading}}}</caption>
+    <thead class="screen-reader-text">
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    {{#days}}
+      <tr>
+        <td class="hours-day">{{day}}</td>
+        <td class="hours-time">
+          {{#opens}}
+            <time itemprop="opens" content="{{opens_ISO}}">{{opens}}</time>—<time itemprop="closes" content="{{closes_ISO}}" >{{closes}}</time>
+          {{/opens}}
+          {{^opens}}
+            {{message}}
+          {{/opens}}
+        </td>
+      </tr>
+    {{/days}}
+  </table>
+{{/hours}}

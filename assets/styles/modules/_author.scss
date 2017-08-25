@@ -1,0 +1,56 @@
+$pic_width: 41%;
+$pad: flex-gutter(12);
+
+&.author-profile {
+  @include media($small) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &__pic {
+    @include span-columns(6);
+    @include shift(-1);
+    @include media($small) {
+      @include span-columns(6);
+      @include shift(0);
+    }
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+
+  &__bio {
+    @include span-columns(7);
+    font-family: $accent-font-family;
+    @include media($nav-break) {
+      padding-top: 1.5rem;
+    }
+    @include media($small) {
+      @include span-columns(6);
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+    }
+  }
+
+  &__social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__social-icon {
+    display: inline-block;
+    margin: 0 $small-spacing;
+    font-size: 1.5rem;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

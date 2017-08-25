@@ -1,0 +1,22 @@
+.clear-filter {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 3px 8px 3px 10px;
+  font-size: 0.75rem;
+  color: #fff;
+  background-color: $dark-gray;
+  text-transform: uppercase;
+  border-radius: 1em;
+  [data-role="remove"] {
+    margin-left: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    &:after {
+      content: "×";
+      font-weight: 800;
+      font-size: 1.25em;
+      line-height: 1;
+      vertical-align: -1px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+version: "2"
+
+services: 
+  db: 
+    image: "mysql:5.7"
+    volumes: 
+      - "db_data:/var/lib/mysql"
+    environment: 
+      MYSQL_DATABASE: wordpress
+      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: wordpress
+      MYSQL_USER: wordpress
+    restart: always
+
+  phpmyadmin: 
+    image: phpmyadmin/phpmyadmin
+    depends_on: 
+      - db
+    ports: 
+      - "8080:80"
+    environment: 
+      PMA_HOST: db
+
+  wordpress: 
+    image: "carneyco/wordpress-nginx"
+    depends_on: 
+      - db
+    ports: 
+      - "80:80"
+    restart: always
+    volumes: 
+      - "../../themes:/var/www/html/wp-content/themes"
+      - "../../plugins:/var/www/html/wp-content/plugins"
+      - "../../uploads:/var/www/html/wp-content/uploads"
+      - "../../../wp-config.php:/var/www/html/wp-config.php"
+
+volumes: 
+  db_data:

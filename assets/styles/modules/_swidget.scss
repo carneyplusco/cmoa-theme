@@ -1,0 +1,134 @@
+.swidget-holder {
+  margin-bottom: $base-spacing;
+}
+
+.swidget_item_widget {
+  background-color: $light-gray;
+  border: 1px solid $medium-gray;
+}
+
+.swidget_misc {
+  padding: 0 $base-spacing;
+  @include media($extra-small) {
+    padding: 0 1rem;
+  }
+}
+
+.swidget_messages > div {
+  padding: $small-spacing $base-spacing $small-spacing $base-spacing;
+  font-style: italic;
+
+  &.swidget_noitems, &.swidget_system_error {
+    background-color: tint($red, 80%);
+    color: $red;
+  }
+
+  &.swidget_items_added {
+    background-color: tint($green, 85%);
+    color: $green;
+  }
+
+  @include media($extra-small) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.swidget_item_name {
+  padding: 1rem $base-spacing;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 1px solid $light-medium-gray;
+
+  @include media($extra-small) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.25em;
+  }
+}
+
+.swidget_ticket_type {
+  display: grid;
+  grid-template-columns: 25% 70px 1fr 30%;
+  grid-template-rows: 1fr 1fr;
+  min-height: 70px;
+  padding: 0.5em $base-spacing;
+  background-color: $light-gray;
+  border-bottom: 1px solid $light-medium-gray;
+
+  @include media($small) {
+    grid-template-columns: 30% 70px 1fr 35%;
+  }
+
+  @include media($extra-small) {
+    grid-template-columns: 30% 50px 1fr 60%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  label {
+    grid-row-start: span 2;
+    @include align-self(center);
+    font-size: 1.1em;
+    font-weight: bold;
+    @include media($extra-small) {
+      font-size: 1em;
+    }
+  }
+}
+
+.swidget_mod_name {
+  margin-right: 5px;
+}
+
+.swidget_ticket_select, .swidget_only_price {
+  grid-row-start: span 2;
+  @include align-self(center);
+  margin-bottom: 0;
+}
+
+.swidget_nm_price {
+  grid-column-start: 4;
+  text-align: center;
+  span {
+    font-size: 1.25em;
+    font-weight: bold;
+
+    @include media($extra-small) {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.swidget_mem_price {
+  grid-column-start: 4;
+  text-align: center;
+  @include media($extra-small) {
+    grid-column-start: 3;
+    grid-column-end: span 2;
+    font-size: 0.875em;
+  }
+}
+
+.swidget_buttons {
+  padding: 1rem $base-spacing;
+  text-align: right;
+
+  @include media($extra-small) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.swidget_btn_addtocart,
+.swidget_btn_purchase {
+  @extend .btn;
+  @include media($extra-small) {
+    display: block;
+    width: 100%;
+  }
+}
+
+.swidget_checkout_link {
+  @extend .btn;
+}

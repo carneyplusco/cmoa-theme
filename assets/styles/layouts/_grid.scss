@@ -1,0 +1,144 @@
+// GRID LAYOUTS - canned layouts, layout-based rules (prefixed with 'l')
+////////////////////////////////////////////////////////////////////////////////
+
+.container,
+.container-full-sm,
+.container-full {
+  @include clearfix;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding-left: $extra-large-spacing;
+  padding-right: $extra-large-spacing;
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.container {
+  @include media($large) {
+    padding-left: $large-spacing;
+    padding-right: $large-spacing;
+  }
+
+  @include media($medium) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.container-full-sm {
+  @include media($large) {
+    padding-left: $large-spacing;
+    padding-right: $large-spacing;
+  }
+
+  @include media($medium) {
+    padding-left: $base-spacing;
+    padding-right: $base-spacing;
+  }
+
+  @include media($small) {
+    padding: 0;
+  }
+
+}
+
+
+.container-full {
+  padding-left: $large-spacing;
+  padding-right: $large-spacing;
+  // padding-left: 0;
+  // padding-right: 0;
+
+  @include media($large) {
+    padding: 0;
+  }
+
+}
+
+
+// third layout
+.l-short {
+  @include span-columns(4);
+  @include clearfix;
+  @include omega(3n);
+  margin-bottom: $large-spacing;
+
+  @include media($medium) {
+    @include span-columns(12);
+    margin-bottom: $large-spacing;
+    &:nth-last-child(3), &:nth-last-child(2) {
+      margin-bottom: $large-spacing;
+    }
+  }
+}
+
+// half layout
+.l-split {
+  @include span-columns(6);
+  @include clearfix;
+  @include omega(2n);
+  margin-bottom: $large-spacing;
+
+  @include media($medium) {
+    @include span-columns(12);
+    &:nth-last-child(2) {
+      margin-bottom: $large-spacing;
+    }
+  }
+}
+
+// two-third layout
+.l-long {
+  @include span-columns(8);
+  @include clearfix;
+  margin-bottom: $large-spacing;
+  @include media($medium) {
+    @include span-columns(12);
+    margin-bottom: $large-spacing;
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// half layout, centered
+.l-middle {
+  @include span-columns(8);
+  @include shift(2);
+  margin-bottom: $large-spacing;
+
+  @include media($medium) {
+    @include span-columns(12);
+    @include shift(0);
+    &:nth-last-child(2) {
+      margin-bottom: $large-spacing;
+    }
+  }
+}
+
+.l-full {
+  @include clearfix;
+  width: 100%;
+}
+
+.l-omega {
+  @include omega;
+}
+
+// Alternate (float) the first child of odd parent
+.l-alternate {
+  @include clearfix;
+  &:nth-child(odd) {
+    > *:first-child {
+      margin-right: 0;
+      float: right;
+    }
+  }
+}

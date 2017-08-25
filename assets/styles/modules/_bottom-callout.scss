@@ -1,0 +1,18 @@
+.bottom-callouts {
+  .bottom-callouts--block {
+    @include span-columns(4);
+    @include omega(3n);
+    @include media($nav-break) {
+      @include span-columns(6);
+      @include omega-reset(3n, 12);
+      @include omega(2n);
+      margin-bottom: $base-spacing;
+    }
+    @include media($small) {
+      @include span-columns(6);
+    }
+    h3 a {
+      color: $dark-gray;
+    }
+  }
+}

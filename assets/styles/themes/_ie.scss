@@ -1,0 +1,109 @@
+body.ie {
+
+  .nav-callout {
+    div {
+      float: left;
+      width: 130px;
+      padding-top: 18px;
+    }
+
+    .nav-icon {
+      padding-top: 15px;
+    }
+
+    @include media($nav-break) {
+      float: right;
+      padding-top: 0;
+    }
+  }
+
+
+  .nav-global li {
+    float: left;
+
+    a {
+      float: left;
+    }
+  }
+
+
+  .nav-icon {
+    float: left;
+  }
+
+  .nav-global-persistant {
+    @include media($nav-break) {
+      width:auto;
+      li {
+        float: left;
+      }
+
+      .nav-icon-hamburger {
+        display: block;
+      }
+    }
+  }
+
+  .chip-callout-featured {
+
+    .chip-callout--info {
+      float: left;
+      width: 100px;
+      margin-right: 20px;
+    }
+
+    .intro {
+      width: 50%;
+      float: left;
+    }
+
+    .description {
+      width: 30%;
+      float: left;
+    }
+  }
+
+
+  .horizontal-callout {
+
+    &.photo-overlay h4 {
+      padding-top: 70px;
+    }
+
+    .content {
+      width: 60%;
+      float: left;
+    }
+
+    .action {
+      float: left;
+      width: 40%;
+    }
+  }
+  .nav-footer {
+    li {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+  }
+
+
+  .form-search {
+    fieldset {
+      width: 80%;
+      float: left;
+      height: 4.1em;
+    }
+    button {
+      width: 20%;
+      float: left;
+    }
+  }
+
+  .events-list, .exhibitions-list {
+    .item {
+      @include clearfix;
+    }
+  }
+
+}

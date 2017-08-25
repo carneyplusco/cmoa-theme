@@ -1,0 +1,897 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ebff7e59b57837c20d5b34c5f11026ca",
+    "packages": [
+        {
+            "name": "carneyplusco/cmoa-footnotes",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carneyplusco/cmoa-footnotes.git",
+                "reference": "588d5412fdeacb76600556d13db381a261495087"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carneyplusco/cmoa-footnotes/zipball/588d5412fdeacb76600556d13db381a261495087",
+                "reference": "588d5412fdeacb76600556d13db381a261495087",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "mustache/mustache": "~2.5",
+                "php": ">=5.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Carney+Co.",
+                    "email": "dev.team@carney.co",
+                    "homepage": "http://carney.co"
+                },
+                {
+                    "name": "Carnegie Museum of Art",
+                    "email": "info@cmoa.org",
+                    "homepage": "http://github.com/cmoa"
+                }
+            ],
+            "description": "WordPress plugin to easily add footnotes to post content",
+            "keywords": [
+                "wordpress, footnotes"
+            ],
+            "support": {
+                "source": "https://github.com/carneyplusco/cmoa-footnotes/tree/v1.2.0",
+                "issues": "https://github.com/carneyplusco/cmoa-footnotes/issues"
+            },
+            "time": "2017-01-20T20:52:04+00:00"
+        },
+        {
+            "name": "carneyplusco/shortcodes-ultimate",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/carneyplusco/shortcodes-ultimate/archive/cmoa.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "carneyplusco/wordpress-add-blog-id",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carneyplusco/wordpress-add-blog-id.git",
+                "reference": "07fec793a6fa482c524fd7c5656ccf97b99f8b3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carneyplusco/wordpress-add-blog-id/zipball/07fec793a6fa482c524fd7c5656ccf97b99f8b3c",
+                "reference": "07fec793a6fa482c524fd7c5656ccf97b99f8b3c",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carney+Co.",
+                    "email": "dev.team@carney.co",
+                    "homepage": "http://carney.co"
+                },
+                {
+                    "name": "Frank Bültge",
+                    "email": "frank@bueltge.de",
+                    "homepage": "https://github.com/bueltge"
+                }
+            ],
+            "description": "Add Blog and User ID on Network",
+            "homepage": "https://carney.co",
+            "keywords": [
+                "carneyplusco",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/carneyplusco/wordpress-add-blog-id/tree/master",
+                "issues": "https://github.com/carneyplusco/wordpress-add-blog-id/issues"
+            },
+            "time": "2016-09-22 00:19:32"
+        },
+        {
+            "name": "cmoa/wp-museum-calendar",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmoa/wp-museum-calendar.git",
+                "reference": "3a1a1776aad2756992024508464eb939fc56b7c0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmoa/wp-museum-calendar/zipball/3a1a1776aad2756992024508464eb939fc56b7c0",
+                "reference": "3a1a1776aad2756992024508464eb939fc56b7c0",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "mustache/mustache": "~2.5",
+                "php": ">=5.4"
+            },
+            "type": "wordpress-plugin",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carney+Co.",
+                    "email": "dev.team@carney.co",
+                    "homepage": "http://carney.co"
+                },
+                {
+                    "name": "Carnegie Museum of Art",
+                    "email": "info@cmoa.org",
+                    "homepage": "http://github.com/cmoa"
+                }
+            ],
+            "description": "Bridge to WordPress calendar data",
+            "homepage": "https://carney.co",
+            "keywords": [
+                "all-in-one-event-calendar",
+                "carneyplusco",
+                "plugin",
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/cmoa/wp-museum-calendar/tree/master",
+                "issues": "https://github.com/cmoa/wp-museum-calendar/issues"
+            },
+            "time": "2017-05-26T15:32:54+00:00"
+        },
+        {
+            "name": "cmoa/wp-static-data",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmoa/wp-static-data.git",
+                "reference": "8e9b91ce2b4a1fbcdfa84e78cc37d30c27d561bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmoa/wp-static-data/zipball/8e9b91ce2b4a1fbcdfa84e78cc37d30c27d561bd",
+                "reference": "8e9b91ce2b4a1fbcdfa84e78cc37d30c27d561bd",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "mustache/mustache": "~2.5",
+                "php": ">=5.4"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Carney+Co.",
+                    "email": "dev.team@carney.co",
+                    "homepage": "http://carney.co"
+                },
+                {
+                    "name": "Carnegie Museum of Art",
+                    "email": "info@cmoa.org",
+                    "homepage": "http://github.com/cmoa"
+                }
+            ],
+            "description": "WordPress plugin to add ability of shortcodes and API to access static JSON files",
+            "keywords": [
+                "wordpress"
+            ],
+            "support": {
+                "source": "https://github.com/cmoa/wp-static-data/tree/v1.0.2",
+                "issues": "https://github.com/cmoa/wp-static-data/issues"
+            },
+            "time": "2016-12-01T21:56:03+00:00"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "roundcube/plugin-installer": "*",
+                "shama/baton": "*"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Composer\\Installers\\Plugin",
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Installers\\": "src/Composer/Installers"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kyle Robinson Young",
+                    "email": "kyle@dontkry.com",
+                    "homepage": "https://github.com/shama"
+                }
+            ],
+            "description": "A multi-framework Composer library installer",
+            "homepage": "https://composer.github.io/installers/",
+            "keywords": [
+                "Craft",
+                "Dolibarr",
+                "Eliasis",
+                "Hurad",
+                "ImageCMS",
+                "Kanboard",
+                "MODX Evo",
+                "Mautic",
+                "Maya",
+                "OXID",
+                "Plentymarkets",
+                "Porto",
+                "RadPHP",
+                "SMF",
+                "Thelia",
+                "WolfCMS",
+                "agl",
+                "aimeos",
+                "annotatecms",
+                "attogram",
+                "bitrix",
+                "cakephp",
+                "chef",
+                "cockpit",
+                "codeigniter",
+                "concrete5",
+                "croogo",
+                "dokuwiki",
+                "drupal",
+                "elgg",
+                "expressionengine",
+                "fuelphp",
+                "grav",
+                "installer",
+                "itop",
+                "joomla",
+                "kohana",
+                "laravel",
+                "lavalite",
+                "lithium",
+                "magento",
+                "mako",
+                "mediawiki",
+                "modulework",
+                "moodle",
+                "phpbb",
+                "piwik",
+                "ppi",
+                "puppet",
+                "reindex",
+                "roundcube",
+                "shopware",
+                "silverstripe",
+                "sydes",
+                "symfony",
+                "typo3",
+                "wordpress",
+                "yawik",
+                "zend",
+                "zikula"
+            ],
+            "time": "2017-04-24T06:37:16+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "jakub-onderka/php-parallel-lint": "0.9",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "time": "2017-06-19T01:22:40+00:00"
+        },
+        {
+            "name": "mustache/mustache",
+            "version": "v2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "fe8fe72e9d580591854de404cc59a1b83ca4d19e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/fe8fe72e9d580591854de404cc59a1b83ca4d19e",
+                "reference": "fe8fe72e9d580591854de404cc59a1b83ca4d19e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.11",
+                "phpunit/phpunit": "~3.7|~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "time": "2017-07-11T12:54:05+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "roots/wp-password-bcrypt",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/wp-password-bcrypt.git",
+                "reference": "5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/wp-password-bcrypt/zipball/5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa",
+                "reference": "5cecd2e98ccc3193443cc5c5db9b3bc7abed5ffa",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "brain/monkey": "^1.3.1",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.8.23|^5.2.9",
+                "squizlabs/php_codesniffer": "^2.5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "wp-password-bcrypt.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Scott Walkinshaw",
+                    "email": "scott.walkinshaw@gmail.com",
+                    "homepage": "https://github.com/swalkinshaw"
+                },
+                {
+                    "name": "qwp6t",
+                    "homepage": "https://github.com/qwp6t"
+                },
+                {
+                    "name": "Jan Pingel",
+                    "email": "jpingel@bitpiston.com",
+                    "homepage": "http://janpingel.com"
+                }
+            ],
+            "description": "WordPress plugin which replaces wp_hash_password and wp_check_password's phpass hasher with PHP 5.5's password_hash and password_verify using bcrypt.",
+            "homepage": "https://roots.io/plugins/wp-password-bcrypt",
+            "keywords": [
+                "wordpress wp bcrypt password"
+            ],
+            "time": "2016-03-01T16:27:06+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/access-monitor",
+            "version": "1.1.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/access-monitor/",
+                "reference": "tags/1.1.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/access-monitor.1.1.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/access-monitor/"
+        },
+        {
+            "name": "wpackagist-plugin/advanced-custom-fields-nav-menu-field",
+            "version": "2.0.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/advanced-custom-fields-nav-menu-field/",
+                "reference": "tags/2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/advanced-custom-fields-nav-menu-field.2.0.0.zip",
+                "reference": "tags/2.0.0",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/advanced-custom-fields-nav-menu-field/"
+        },
+        {
+            "name": "wpackagist-plugin/all-in-one-event-calendar",
+            "version": "2.5.21",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/all-in-one-event-calendar/",
+                "reference": "tags/2.5.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/all-in-one-event-calendar.2.5.21.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/all-in-one-event-calendar/"
+        },
+        {
+            "name": "wpackagist-plugin/cms-tree-page-view",
+            "version": "1.3.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/cms-tree-page-view/",
+                "reference": "tags/1.3.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/cms-tree-page-view.1.3.4.zip",
+                "reference": "tags/1.3.4",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/cms-tree-page-view/"
+        },
+        {
+            "name": "wpackagist-plugin/contact-form-7",
+            "version": "4.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
+                "reference": "tags/4.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/contact-form-7.4.8.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/edit-flow",
+            "version": "0.8.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/edit-flow/",
+                "reference": "tags/0.8.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/edit-flow.0.8.2.zip",
+                "reference": "tags/0.8.2",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/edit-flow/"
+        },
+        {
+            "name": "wpackagist-plugin/elasticpress",
+            "version": "2.3.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/elasticpress/",
+                "reference": "tags/2.3.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/elasticpress.2.3.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/elasticpress/"
+        },
+        {
+            "name": "wpackagist-plugin/enhanced-media-library",
+            "version": "2.4.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/enhanced-media-library/",
+                "reference": "tags/2.4.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/enhanced-media-library.2.4.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/enhanced-media-library/"
+        },
+        {
+            "name": "wpackagist-plugin/members",
+            "version": "1.1.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/members/",
+                "reference": "tags/1.1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/members.1.1.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/members/"
+        },
+        {
+            "name": "wpackagist-plugin/open-graph-protocol-framework",
+            "version": "1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/open-graph-protocol-framework/",
+                "reference": "tags/1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/open-graph-protocol-framework.1.2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/open-graph-protocol-framework/"
+        },
+        {
+            "name": "wpackagist-plugin/post-thumbnail-editor",
+            "version": "2.4.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/post-thumbnail-editor/",
+                "reference": "tags/2.4.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/post-thumbnail-editor.2.4.8.zip",
+                "reference": "tags/2.4.8",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/post-thumbnail-editor/"
+        },
+        {
+            "name": "wpackagist-plugin/regenerate-thumbnails",
+            "version": "2.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/regenerate-thumbnails/",
+                "reference": "tags/2.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/regenerate-thumbnails.2.2.6.zip",
+                "reference": "tags/2.2.6",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/rest-api",
+            "version": "2.0-beta15",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/rest-api/",
+                "reference": "tags/2.0-beta15"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/rest-api.2.0-beta15.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/rest-api/"
+        },
+        {
+            "name": "wpackagist-plugin/safe-redirect-manager",
+            "version": "1.7.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/safe-redirect-manager/",
+                "reference": "tags/1.7.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/safe-redirect-manager.1.7.8.zip",
+                "reference": "tags/1.7.8",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/safe-redirect-manager/"
+        },
+        {
+            "name": "wpackagist-plugin/taxonomy-terms-order",
+            "version": "1.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/taxonomy-terms-order/",
+                "reference": "tags/1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/taxonomy-terms-order.1.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/taxonomy-terms-order/"
+        },
+        {
+            "name": "wpackagist-plugin/user-switching",
+            "version": "1.0.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/user-switching/",
+                "reference": "tags/1.0.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/user-switching.1.0.9.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-switching/"
+        },
+        {
+            "name": "wpackagist-plugin/wufoo-shortcode",
+            "version": "1.43",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wufoo-shortcode/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wufoo-shortcode.zip",
+                "reference": "trunk",
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wufoo-shortcode/"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "wpackagist-plugin/rest-api": 10,
+        "carneyplusco/wordpress-add-blog-id": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

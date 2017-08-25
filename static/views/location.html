@@ -1,0 +1,16 @@
+<p>
+  {{#location}}
+    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">
+        {{address}}
+      </span>
+    </span>
+    <br />
+    <span itemprop="addressLocality">{{city}}</span>,
+    <span itemprop="addressRegion">{{state}}</span>
+    <span itemprop="postalCode">{{zip}}</span>
+    <br />
+    <span itemprop="telephone">{{phone}}</span>
+
+  {{/location}}
+</p>

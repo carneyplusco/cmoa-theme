@@ -1,0 +1,7 @@
+.items {
+  &__related {
+    &.-event .times {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+.calendar-widget {
+  @include span-columns(4);
+
+  .calendar-nav {
+    ul {
+      list-style: none;
+      margin: 0 0 $small-spacing 0;
+      padding: 0;
+      li {
+        display: inline-block;
+      }
+    }
+
+    .prev-month, .next-month {
+      display: inline-block;
+      width: 10%;
+      font-size: 2.5em;
+      color: $dark-gray;
+      text-align: center;
+      line-height: 0.5;
+      vertical-align: middle;
+      a {
+        padding: 0 $small-spacing;
+        color: $dark-gray;
+        cursor: pointer;
+      }
+    }
+
+    .month-name {
+      display: inline-block;
+      width: 80%;
+      color: #000;
+      font-size: 1.1em;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      vertical-align: text-top;
+    }
+  }
+
+  .cal-split {
+    @include media($small) {
+      @include span-columns(3);
+    }
+    @include media($extra-small) {
+      @include span-columns(6);
+    }
+  }
+
+  .loading .day-list {
+    opacity: 0;
+  }
+  .day-list {
+    opacity: 1;
+    overflow: hidden;
+    @include transition(opacity 0.2s ease);
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        @include span-columns(12/7);
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-family: $alt-font-family;
+        font-size: 0.75em;
+        text-align: center;
+        border: 1px solid transparent;
+        &.outside a {
+          color: #4e4e4e; // lightest gray for 4.5:1 contrast against teal
+          font-style: italic;
+        }
+        &.has-events a {
+          text-decoration: underline;
+        }
+        &.today {
+          background-color: #fff;
+          a { color: $dark-gray; }
+        }
+        &.active {
+          border: 1px solid $dark-gray;
+        }
+        a {
+          color: #000;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .event-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 1.5em;
+      overflow: hidden;
+      .event-time {
+        @include span-columns(4);
+        padding-top: 0.2em;
+        font-size: 0.9em;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-align: right;
+      }
+      .event-name {
+        @include span-columns(8);
+        padding-left: 0.5em;
+        font-size: 1.1em;
+        line-height: $base-spacing;
+        a {
+          color: $dark-gray;
+        }
+      }
+    }
+  }
+}

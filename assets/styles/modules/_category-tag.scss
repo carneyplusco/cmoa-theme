@@ -1,0 +1,23 @@
+.category-tag {
+  display: inline-block;
+  margin: $base-spacing 0;
+  padding: 0.5rem 0.75rem;
+  color: $medium-dark-gray;
+  background-color: $light-medium-gray;
+  font-family: $alt-font-family;
+  font-size: 0.875rem;
+  font-weight: 600;
+  // copied this from %chip, should we abstract it out?
+  @each $color_name, $color_var in (teal: $teal, cadet: $cadet, red: $red, gold: $gold, charcoal: $charcoal) {
+    &.-#{$color_name} {
+      color: $dark-gray;
+      background-color: $color_var;
+    }
+  }
+
+  @each $color_name in cadet, red, charcoal {
+    &.-#{$color_name} {
+      @extend %inverse;
+    }
+  }
+}

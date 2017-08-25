@@ -1,0 +1,272 @@
+
+// BASE TYPOGRAPHY STYLES
+////////////////////////////////////////////////////////////////////////////////
+
+body {
+  background-color: $base-background-color;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  @include font-smoothing(on);
+}
+
+.accent-text {
+  font-family: $accent-font-family;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+  line-height: $header-line-height;
+  font-weight: 100;
+  // color: $base-font-color;
+  font-style: normal;
+  margin: 0 0 $small-spacing 0;
+  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+
+  a:hover{
+    color: $red !important;
+  }
+}
+
+// spacing between sections in page content on cmoaorg
+.page-content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    padding-top: $base-spacing;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+h1, .level-1 {
+  font-size: 2.75em;
+  font-weight: 800;
+  &.em,
+  & em {
+    font-style: normal;
+    font-weight: 400;
+  }
+  @include media($small) {
+    font-size: 2em;
+  }
+}
+
+h2, .level-2 {
+  font-size: 2em;
+  font-weight: 800;
+  &.em,
+  & em {
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @include media($small) {
+    font-size: 1.5em;
+  }
+}
+
+h3, .level-3 {
+  font-size: 1.5em;
+  text-transform: none;
+  font-family: $alt-font-family;
+  font-weight: 800;
+
+  @include media($small) {
+    font-size: 1.25em;
+  }
+}
+
+h3.alt {
+  font-size: 2em;
+  text-transform: none;
+  font-family: $accent-font-family;
+  font-weight: 400;
+  @include media($medium) {
+    font-size: 1.75em;
+  }
+  @include media($small) {
+    font-size: 1.25em;
+  }
+}
+
+
+h4, .level-4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: .25em;
+  // font-style: normal;
+
+  &.em,
+  & em {
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+
+h5, .level-5 {
+  font-size: 1em;
+  font-weight: 800;
+}
+
+h6, .level-6 {
+  font-size: 0.875em;
+  font-weight: 400;
+}
+
+p {
+  margin: 0 0 $small-spacing 0;
+  &:empty {
+    margin: 0;
+  }
+}
+
+a {
+  transition: color, 0.2s;
+  color: $base-link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-link-color;
+    // text-decoration: underline;
+  }
+
+  &:active,
+  // &:focus
+  {
+    color: $hover-link-color;
+  }
+
+  &:focus {
+    // outline: 2px solid $red;
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+
+  &.large {
+    margin: $large-spacing 0;
+  }
+
+  &.short {
+    width: 20%;
+    border-width: 3px;
+  }
+
+  &.thick {
+    border-width: 3px;
+    border-color: $dark-gray;
+  }
+}
+
+img,
+picture,
+figure {
+  margin: 0;
+  max-width: 100%;
+}
+
+figure.default {
+  margin: 1em 40px;
+}
+
+pre {
+  margin: 0;
+  background: rgba($teal, .25);
+  display: inline;
+}
+
+.quote {
+  margin: 0 $small-spacing $small-spacing $small-spacing;
+
+}
+
+blockquote {
+  font-size: 1.15em;
+  margin: 0 0 $small-spacing 0;
+}
+
+.blockquote-attr {
+  display: block;
+
+  &:before {
+    content:"—"
+  }
+}
+
+
+cite {
+  font-style: italic;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  text-align: left;
+}
+
+.hashtag {
+  font-weight: bold;
+}
+
+// Alternate section colors
+////////////////////////////////////////////////////////////////////////////////
+%inverse {
+  color: $inverse-font-color;
+
+  a {
+    color: $action-color;
+
+    &:hover {
+      color: $action-hover-color;
+    }
+
+    &:active, &:focus {
+      color: $action-hover-color;
+      outline: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $inverse-font-color;
+    a {
+      color: $inverse-font-color;
+    }
+  }
+
+  pre {
+    border-color: $inverse-font-color;
+  }
+
+  hr {
+    border-color: rgba(#fff, .25);
+  }
+
+  p {
+    color: $inverse-font-color;
+  }
+
+}

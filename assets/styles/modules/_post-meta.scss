@@ -1,0 +1,50 @@
+.post-meta {
+  padding-left: 1.5rem;
+  padding-right: $base-spacing;
+  border-left: 1px solid $light-medium-gray;
+  @include span-columns(3.5);
+  @include omega();
+  @include media($medium) {
+    @include span-columns(4);
+  }
+  @include media($small) {
+    display: none;
+  }
+
+  &__author {
+    img {
+      max-width: 50%;
+    }
+    @include media($small) {
+      @include span-columns(3);
+    }
+  }
+
+  &__byline {
+    font-size: 0.875rem;
+    line-height: 1.2;
+  }
+
+  &__name {
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  .post-preview__tags {
+    font-size: 0.875rem;
+  }
+
+  &__notes {
+    font-size: 0.875rem;
+    clear: both;
+    @include media($small) {
+      @include span-columns(3);
+    }
+  }
+}

@@ -1,0 +1,97 @@
+#react-datepicker {
+  position: relative;
+  margin-bottom: $base-spacing;
+  z-index: 3;
+  .calendar-widget {
+    @include span-columns(12);
+    display: none;
+    position: absolute;
+    padding: 2em 1.5em;
+    background-color: $light-medium-gray;
+    @include transition(height 0.1s ease-in);
+    &.open {
+      display: block;
+    }
+    .day-list ul li {
+      width: (100%/7);
+      margin: 0;
+      padding: 0.9em;
+      font-size: 1em;
+      &.outside a {
+        color: $medium-dark-gray;
+      }
+      &.today {
+        background-color: transparent;
+        border: 1px solid $medium-dark-gray;
+      }
+      &.selected {
+        background-color: #fff;
+        &.today a {
+          color: $cadet;
+        }
+      }
+      &.start, &.end {
+        background-color: $medium-dark-gray;
+        a { color: #fff; }
+      }
+    }
+  }
+}
+
+#react-event-filter, .event-filter {
+  position: relative;
+  z-index: 2;
+  ul.filter-list {
+    @include span-columns(12);
+    display: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: $light-medium-gray;
+    &.open {
+      display: block;
+    }
+    li {
+      &:hover, &.active {
+        background: $medium-dark-gray;
+        a { color: #fff; }
+      }
+      a {
+        display: block;
+        padding: 0.5em 1em;
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+.event-filter {
+  // @include media($small) {
+    margin-bottom: $base-spacing;
+  // }
+}
+
+.calendar-control {
+  @include icon--chevron;
+  margin-bottom: 1px;
+  padding: $small-spacing;
+  background-color: $light-medium-gray;
+  cursor: pointer;
+  &:before {
+    float: right;
+    margin-top: 3px;
+    transition: all .3s;
+    transform: rotate(-180deg);
+  }
+  &.open:before {
+    transform: rotate(0deg);
+  }
+  strong {
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  .end-date:before {
+    content: "–";
+  }
+}

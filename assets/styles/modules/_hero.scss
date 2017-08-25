@@ -1,0 +1,59 @@
+.hero {
+  @extend .container-full; // this controls full width hero
+  position: relative;
+  top: -1px;
+  width: 100%;
+  min-height: 1.5rem;
+  max-height: 500px;
+  overflow: hidden;
+
+  @include media($large) {
+    min-height: 0;
+  }
+
+  @include media($medium) {
+    max-height: none;
+  }
+
+  img {
+    position: relative;;
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include media($medium) {
+      left: 50%;
+      width: auto;
+      max-width: none;
+      height: 400px;
+      transform: translateX(-50%);
+    }
+
+    @include media($small) {
+      height: 250px;
+    }
+
+    @include media($extra-small) {
+      height: 178px;
+    }
+  }
+}
+
+.hero-credit {
+  padding-top: 0.5em;
+  padding-bottom: $small-spacing;
+  @include media($medium) {
+    padding: $small-spacing $base-spacing;
+  }
+  p {
+    margin: 0;
+    color: $medium-dark-gray;
+    font-size: 0.875rem;
+  }
+  + .section-primary {
+    padding-top: $medium-spacing;
+    @include media($small) {
+      padding-top: $small-spacing
+    }
+  }
+}

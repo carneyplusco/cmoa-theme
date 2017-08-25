@@ -1,0 +1,37 @@
+// BASE TABLE STYLES
+////////////////////////////////////////////////////////////////////////////////
+
+table {
+  border-collapse: collapse;
+  margin: $small-spacing 0 1rem 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+caption {
+  @extend .level-4;
+  margin: 0 0 $small-spacing 0;
+  text-align: left;
+}
+
+th {
+  border-bottom: 1px solid shade($base-border-color, 25%);
+  font-weight: 600;
+  padding: $small-spacing 0;
+  text-align: left;
+}
+
+td {
+  border-bottom: $base-border;
+  padding: $small-spacing 0;
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
+}
+
+tr:first-child td {
+  padding-top: 0;
+}

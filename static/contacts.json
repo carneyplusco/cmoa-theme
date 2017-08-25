@@ -1,0 +1,55 @@
+{
+  "email_cafe_carnegie": "thecafecarnegie@carnegiemuseums.org",
+  "phone_cafe_carnegie": "(412) 622-3225",
+
+  "role_visitor_services": "Visitor Services Coordinator",
+  "email_visitor_services": "visitorservices@carnegiemuseums.org",
+  "phone_visitor_services": "(412) 622-3131",
+
+  "role_group_visits": "Group Visits Coordinator",
+  "email_group_visits": "groupvisits@carnegiemuseums.org",
+  "phone_group_visits": "(412) 622-3289",
+  "phone_group_visits_registration": "(412) 622-3288",
+
+  "role_education": "Education Programs Coordinator",
+  "email_education": "education@cmoa.org",
+  "phone_education": "(412) 246-4896",
+
+  "role_kids_families": "Kids &amp; Family Programs Coordinator",
+  "email_kids_families": "children-families@cmoa.org",
+  "phone_kids_families": "(412) 622-3179",
+
+  "role_teens": "Teen Programs Coordinator",
+  "email_teens": "teen@cmoa.org",
+  "phone_teens": "(412) 622-3179",
+
+  "role_adults": "Adult Programs Coordinator",
+  "email_adults": "adults@cmoa.org",
+  "phone_adults": "(412) 622-3179",
+
+  "role_teachers": "Teacher Programs Coordinator",
+  "email_teachers": "teachers@cmoa.org",
+  "phone_teachers": "(412) 578-2560",
+
+  "role_docents": "Docent Programs Coordinator",
+  "email_docents": "docent@cmoa.org",
+  "phone_docents": "(412) 578-2560",
+
+  "role_tac": "The Art Connection Program Coordinator",
+  "email_tac": "tac@cmoa.org",
+  "phone_tac": "(412) 622-3179",
+
+  "role_press": "Media Relations Manager",
+  "email_press": "press@cmoa.org",
+  "phone_press": "(412) 688-8690",
+  "mobile_press": "(412) 216-7909",
+  
+  "role_program_registration": "Program Registration Coordinator",
+  "email_program_registration": "programregistration@carnegiemuseums.org",
+  "phone_program_registration": "(412) 622-3288",
+
+  "role_social": "Manager of Social and Entrepreneurial Experiences",
+  "email_social": "fun@cmoa.org",
+  "phone_social": "(412) 622-3316"
+
+}

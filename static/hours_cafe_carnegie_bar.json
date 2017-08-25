@@ -1,0 +1,54 @@
+{
+  "heading": "Hours of Operation",
+  "days": [
+    {
+      "day": "Monday",
+      "opens": "8 am",
+      "opens_ISO": "8:00:00",
+      "closes": "5 pm",
+      "closes_ISO": "17:00:00"
+    },
+    {
+      "day": "Tuesday",
+      "opens": "8 am",
+      "opens_ISO": "8:00:00",
+      "closes": "2 pm",
+      "closes_ISO": "14:00:00"
+    },
+    {
+      "day": "Wednesday",
+      "opens": "8 am",
+      "opens_ISO": "8:00:00",
+      "closes": "2 pm",
+      "closes_ISO": "17:00:00"
+    },
+    {
+      "day": "Thursday",
+      "opens": "8 am",
+      "opens_ISO": "8:00:00",
+      "closes": "8 pm",
+      "closes_ISO": "20:00:00"
+    },
+    {
+      "day": "Friday",
+      "opens": "8 am",
+      "opens_ISO": "8:00:00",
+      "closes": "5 pm",
+      "closes_ISO": "17:00:00"
+    },
+    {
+      "day": "Saturday",
+      "opens": "9 am",
+      "opens_ISO": "9:00:00",
+      "closes": "5 pm",
+      "closes_ISO": "17:00:00"
+    },
+    {
+      "day": "Sunday",
+      "opens": "9 am",
+      "opens_ISO": "9:00:00",
+      "closes": "5 pm",
+      "closes_ISO": "17:00:00"
+    }
+  ]
+}

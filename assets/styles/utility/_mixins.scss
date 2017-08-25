@@ -1,0 +1,58 @@
+// @MIXINS
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin btn-link {
+  @include icon--chevron;
+  display: inline-block;
+
+  &:before {
+    margin-left: .5em;
+    transform: rotate(90deg);
+    float: right;
+    font-size: .6em;
+    line-height: 2.5;
+  }
+}
+
+// fixed gutter layout
+@mixin span-columns-fg( $col, $total-col: 12) {
+  $col-ratio: $col/$total-col;
+  width: calc( #{$col-ratio*100%} + #{ $col-ratio * $large-spacing - $large-spacing} );
+  margin-right: $large-spacing;
+  float: left;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media($medium) {
+    width: calc( #{$col-ratio*100%} + #{ $col-ratio * $base-spacing - $base-spacing} );
+    margin-right: $base-spacing;
+  }
+}
+
+
+@mixin omega-reset($nth, $fg-gutter) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter($fg-gutter); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+@mixin omega-reset-fg($nth) {
+  &:nth-child(#{$nth}) { margin-right: $large-spacing; }
+  &:nth-child(#{$nth}+1) { clear: none }
+  @include media($medium) {
+    &:nth-child(#{$nth}) { margin-right: $base-spacing; }
+
+  }
+}
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}

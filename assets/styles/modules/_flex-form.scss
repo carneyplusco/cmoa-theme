@@ -1,0 +1,20 @@
+.flex-input {
+  display: flex;
+  @include media($medium) {
+    flex-direction: column;
+  }
+  @include media($small) {
+    flex-direction: row;
+  }
+  @include media($extra-small) {
+    flex-direction: column;
+  }
+  #{$all-text-inputs} {
+    display: inline-block;
+    flex-grow: 2;
+    width: auto;
+    margin-bottom: 0;
+    padding: $small-spacing;
+    border-color: $light-medium-gray;
+  }
+}

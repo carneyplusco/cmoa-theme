@@ -1,0 +1,246 @@
+// for use in side navigations of different styles
+
+.sidebar {
+  @include span-columns(4);
+  @include omega();
+  padding: 0.33rem 0;
+
+  @include media($medium) {
+    @include span-columns(12);
+  }
+
+  ul {
+    display: block;
+    margin-bottom: $small-spacing;
+    padding: 0 0 0 $base-spacing;
+    overflow: hidden;
+  }
+
+  li {
+    margin: 0 0 $small-spacing 0;
+    padding: 0;
+    line-height: 1.2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // bottom h rule
+  > div {
+    margin-bottom: $base-spacing;
+    padding-bottom: $small-spacing;
+    border-bottom: $base-border;
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+}
+
+.sidebar div.related {
+  padding: $base-spacing;
+  border: 1px solid $light-medium-gray;
+  ul.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    li {
+      margin-bottom: $base-spacing;
+      font-family: $accent-font-family;
+      line-height: 1.25;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .items__related a {
+    font-family: $accent-font-family;
+  }
+  time {
+    display: block;
+    font-family: $alt-font-family;
+    text-transform: uppercase;
+  }
+  hr:last-child {
+    display: none;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+.sidebar__links {
+  img {
+    height: auto;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+.sidebar__blocks {
+  @include clearfix;
+  margin-bottom: $medium-spacing;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      @include span-columns(6);
+      @include omega(2n);
+      height: 0;
+      padding-bottom: 40%;
+      margin-bottom: $small-spacing;
+      position: relative;
+
+      @include media($medium) {
+        @include span-columns(3)
+        @include omega-reset-fg( 2n );
+        @include omega(4n);
+        padding-bottom: 20%;
+        margin-bottom: $base-spacing;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: .5;
+    transition: all .5s;
+  }
+
+  span {
+    @include btn-link;
+    position: relative;
+    padding: 10px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.25;
+    z-index: 2;
+
+  }
+
+  a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+
+    &:hover img{
+      opacity: .8;
+      transform: scale(1.2);
+    }
+
+    &:hover span{
+      text-shadow: 1px 1px 5px rgba(#000, .5);
+    }
+  }
+
+}
+
+
+.sidebar__share-links {
+  padding-top: $base-spacing;
+
+  .page-content__share-links, .page-content__print {
+    margin-bottom: 0.25rem;
+    margin-left: 0;
+  }
+
+  &:before {
+    display: block;
+    padding-bottom: $base-spacing;
+    border-top: $base-border;
+    content: '';
+  }
+}
+
+// Storyboard variation
+////////////////////////////////////////////////////////////////
+.sidebar--storyboard {
+  padding-top: 0;
+  padding-left: $base-spacing;
+  border-left: $base-border;
+  font-size: 1rem;
+
+  .sidebar__storyboard-intro {
+    padding-right: $base-spacing;
+    border: none;
+  }
+
+  @include media($medium) {
+    display: none;
+  }
+
+  [itemprop="author"] {
+    margin-bottom: $base-spacing;
+    [itemprop="name"] {
+      display: block;
+      font-weight: 600;
+    }
+  }
+
+  .contact-us {
+    margin-bottom: $base-spacing;
+    padding: $base-spacing 0;
+    border-top: 1px solid $light-medium-gray;
+    border-bottom: 1px solid $light-medium-gray;
+    h3, p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+// Sidebar nav (overrides header quickview-nav styles)
+///////////////////////////////////////////////////////////////////////////////
+.sidebar .quickview-nav.quickview {
+  display: block;
+  border-bottom: none;
+  opacity: 1;
+  > ul {
+    border: 1px solid $medium-gray;
+    > li > a {
+      font-size: 1.1em;
+      color: $red;
+      border: none;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+    .sub-menu {
+      a {
+        color: $dark-gray;
+        background-color: #fff;
+      }
+      .sub-menu {  // do we need to go deeper than 3 levels?
+        max-height: none;
+        li a { padding-left: 10%; }
+      }
+    }
+    .sub-menu li.current-menu-item > a, .sub-menu a:hover {
+      color: #fff;
+      background-color: $red;
+    }
+  }
+  .quickview-nav__expand {
+    background: #fff;
+    &:before {
+      color: $dark-gray;
+    }
+  }
+  a {
+    font-size: 0.875em;
+    padding: $small-spacing 1rem;
+    border-color: $light-medium-gray;
+  }
+  .quickview-nav__expand {
+    padding: 0.55em;
+    border-left: 1px solid $light-medium-gray;
+    &:before {
+      font-size: 0.45em;
+    }
+  }
+}

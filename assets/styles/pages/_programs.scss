@@ -1,0 +1,27 @@
+.program-list {
+  margin-top: $medium-spacing;
+  .program--item {
+    margin-bottom: $large-spacing;
+    overflow: hidden;
+    img {
+      display: block;
+      height: auto;
+      margin-bottom: $small-spacing;
+    }
+    h3 {
+      margin-bottom: $small-spacing;
+    }
+  }
+  .program--thumb {
+    @include span-columns(3);
+  }
+  .program--content {
+    @include span-columns(9);
+  }
+}
+
+.publication-list {
+  .publication--item {
+    margin-bottom: $large-spacing;
+  }
+}

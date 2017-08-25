@@ -1,0 +1,12 @@
+<table>
+  {{#admissions}}
+    <tr>
+    {{#type}}
+      <td class="admissions-type">{{type}}:</td>
+      <td class="admissions-cost">{{cost}}</td>
+    {{/type}}
+    {{^type}}
+      <td class="admissions-cost" colspan="2">{{cost}}</td>
+    {{/type}}
+  {{/admissions}}
+</table>

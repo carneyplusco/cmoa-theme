@@ -1,0 +1,135 @@
+.swidget-cart-holder {
+  .cart-products {
+    font-size: 1.1em;
+
+    @include media($small) {
+      font-size: 1em;
+      border-top: 1px solid $medium-gray;
+    }
+
+    th {
+      padding: 0 $base-spacing;
+      font-weight: normal;
+      border-bottom-color: $medium-gray;
+    }
+  }
+
+  .heading-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    @include media($small) {
+      display: none;
+    }
+  }
+
+  .product-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: $light-gray;
+
+    @include media($small) {
+      border-bottom: 1px solid $medium-gray;
+    }
+
+    &:nth td {
+      border-bottom-color: $medium-gray;
+    }
+
+    td {
+      padding: $base-spacing;
+      font-weight: bold;
+      border-bottom: 1px solid $medium-gray;
+
+      &:first-child {
+        border-left: 1px solid $medium-gray;
+      }
+
+      &:last-child {
+        border-right: 1px solid $medium-gray;
+      }
+
+      @include media($small) {
+        padding-bottom: 0;
+        border: none;
+        &:first-child, &:last-child {
+          border: none;
+        }
+      }
+
+      &.name, &.qty {
+        @include media($small) {
+          grid-column-start: span 3;
+          border-left: 1px solid $medium-gray;
+        }
+      }
+
+      &.options, &.value {
+        @include media($small) {
+          grid-column-start: span 1;
+          border-right: 1px solid $medium-gray;
+        }
+      }
+
+      &.qty, &.value {
+        @include media($small) {
+          padding-top: $small-spacing;
+          padding-bottom: $small-spacing;
+        }
+      }
+
+      &.qty {
+        @include display(flex);
+        @include align-items(baseline);
+        &:before {
+          content: "Qty:";
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .total-row {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+
+    @include media($small) {
+      grid-template-columns: 75px 2fr 1fr;
+    }
+
+    td {
+      padding: $base-spacing;
+      font-size: 1.5em;
+      font-weight: bold;
+      &.name {
+        text-align: right;
+
+        &:after {
+          content: ":";
+        }
+
+        @include media($small) {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .swidget_cart_buttons {
+    padding: 0 $base-spacing;
+    text-align: right;
+  }
+}
+
+body.page article.page-content .link-checkout {
+  &:after {
+    font-family: 'icons';
+    content: $icon-cart;
+    margin-left: 5px;
+    vertical-align: top;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,282 @@
+// clear default button styles
+button {
+  background: none;
+  border: none;
+}
+
+// BASE BUTTON STYLES
+////////////////////////////////////////////////////////////////////////////////
+
+%btn-base {
+  position: relative;
+  display: inline-block;
+  padding: .95em 1em .75em 1em;
+  color: #fff !important;
+  background-color: $action-color;
+  border: none;
+  font-family: $alt-font-family;
+  font-size: 1em;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  transition: all .2s;
+  box-shadow: 0 0 0px 0 rgba(0,0,0,.1);
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0px solid transparent;
+    content: '';
+    transition: all .2s;
+  }
+
+  &:focus {
+    outline: thin dotted #333;
+    outline-offset: -2px;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+
+    &:after {
+      border-width: 2px;
+      border-color: rgba(#000, .1);
+    }
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,.3);
+    transition: none .3s;
+    transform: translateY(1px);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    color: #fff;
+    background: $dark-gray;
+  }
+
+  &.disabled,
+  &:disabled {
+    background: #888;
+  }
+}
+
+// Button Types
+////////////////////////////////////////////////////////////////////////////////
+
+// Main btn
+.btn {
+  @extend %btn-base;
+}
+
+// Alternate btn
+.btn-alt {
+  @extend %btn-base;
+  color: $base-font-color;
+  background-color: transparent;
+
+  &:after{
+    border-width: 2px;
+    border-color: $action-color;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    background-color: rgba(#000, .05);
+    color: $base-font-color;
+
+    &:after {
+      border-color: $action-color;
+    }
+  }
+}
+
+// Inverse alt btn
+%inverse .btn-alt{
+  color: $light-gray !important;
+
+  &:after {
+    border-color: $light-gray;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active{
+    background-color: rgba(#fff, .1);
+    color: $base-font-color;
+  }
+}
+
+
+// Icon buttons
+[class^="btn-icon"]{
+  @extend %btn-base;
+  position: relative;
+  padding-left: 3.2em;
+  color: $base-font-color;
+  font-weight: 100;
+  text-transform: none;
+  background-color: rgba(#000, .1);
+
+  &:before {
+    position: absolute;
+    width: 1em;
+    left: 25px;
+    top: 7px;
+    z-index: 99;
+    transition: all .3s;
+    background: none;
+    content: '';
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $base-font-color;
+
+    &:before {
+      left: 10px;
+      opacity: 1;
+    }
+  }
+}
+
+%inverse [class^="btn-icon"]{
+  color: #fff;
+  background-color: rgba(#fff, .2);
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: #fff;
+  }
+}
+
+.btn-icon-calendar:before {
+  content: url("../images/calendar-dark.svg");
+}
+
+%inverse .btn-icon-calendar:before {
+  content: url("../images/calendar-light.svg");
+}
+
+
+// Button Sizes
+////////////////////////////////////////////////////////////////////////////////
+
+.btn-lg {
+  @extend %btn-base;
+  padding: 10px 35px !important;
+  font-size: 1.5em !important;
+}
+
+.btn-sm {
+  @extend %btn-base;
+  padding: 5px 10px 3px 10px !important;
+  font-size: 1em !important;
+}
+
+.btn-block {
+  @extend %btn-base;
+  display: block !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// Special Links
+////////////////////////////////////////////////////////////////////////////////
+
+.btn-link{
+  color: $medium-gray;
+  text-decoration: underline;
+}
+
+%inverse .btn-link {
+  color: #fff;
+
+  &:hover {
+    color: $light-gray;
+  }
+}
+
+.btn-continue {
+  @include icon--arrow-right;
+  color: $dark-gray;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: none !important;
+    color: $red;
+  }
+
+  &:before {
+    margin-right: 5px;
+    padding: 2px;
+    color: $red;
+
+    font-size: 0.6rem;
+    border: 3px solid $red;
+    border-radius: 10px;
+  }
+}
+
+.btn-arrow {
+  color: $base-font-color;
+  font-weight: 600;
+
+  &:hover {
+    color: $red;
+    &:after {
+      border-color: $red;
+    }
+  }
+
+  &.-next:after, &.-prev:before {
+    padding: 2px;
+    color: $red;
+    font-family: 'icons';
+    font-size: 0.6rem;
+    font-weight: 400;
+    border: 3px solid $red;
+    border-radius: 10px;
+  }
+
+  &.-next:after {
+    content: $icon-arrow-right;
+    margin-left: 5px;
+  }
+
+  &.-prev:before {
+    content: $icon-arrow-left;
+    margin-right: 5px;
+  }
+
+  &.btn.-next:after, &.btn.-prev:before {
+    position: static;
+    width: auto;
+    height: auto;
+    color: #fff;
+    border-color: #fff;
+  }
+}

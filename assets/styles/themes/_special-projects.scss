@@ -1,0 +1,9 @@
+// Overrides for Special Projects child theme
+
+body.home .hero + .section-primary {
+  padding-top: $large-spacing;
+}
+
+.sidebar figcaption h5, .level-5 {
+  margin-bottom: 0;
+}

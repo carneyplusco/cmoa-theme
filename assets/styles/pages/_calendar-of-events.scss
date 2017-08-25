@@ -1,0 +1,212 @@
+.container .calendar-controls {
+  @include span-columns(8);
+  margin-bottom: $medium-spacing;
+  @include media($medium) {
+    @include span-columns(12);
+  }
+  &__wrapper {
+    @include span-columns(6);
+    @include media($small) {
+      @include span-columns(6);
+    }
+  }
+}
+
+.events-list, .exhibitions-list {
+  .item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: $small-spacing;
+    padding: $medium-spacing 0 $medium-spacing 0;
+    border-top: 1px solid $light-medium-gray;
+    @include media($small) {
+      display: block;
+      margin-bottom: 0;
+      padding-top: 0;
+      overflow: hidden;
+      border-top: none;
+    }
+  }
+  .item h2, .exhibition h2 {
+    margin-bottom: $small-spacing;
+    font-family: $accent-font-family;
+    font-weight: 400;
+    a {
+      color: $dark-gray;
+      &:hover {
+        color: tint($dark-gray, 10%);
+      }
+    }
+  }
+
+  .chip {
+    position: relative;
+    @include span-columns(2);
+    @extend %chip;
+    max-width: 100px;
+    min-height: 100px;
+    @include media($small) {
+      @include span-columns(6);
+      margin-bottom: $small-spacing;
+      max-width: none;
+      min-height: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    p {
+      margin-bottom: 0;
+      @include media($small) {
+        @include span-columns(3);
+        margin: $small-spacing;
+      }
+    }
+
+    strong {
+      display: block;
+      @include media($small) {
+        display: inline;
+      }
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 16%;
+      max-width: 100px;
+      max-height: 100px;
+      margin-bottom: -12px;
+      @include media($small) {
+        position: static;
+        float: right;
+      }
+    }
+
+    time {
+      @include media($small) {
+        display: inline-block;
+        padding: $small-spacing;
+      }
+      strong:after {
+        @include media($small) {
+          content: ",";
+        }
+      }
+      strong:last-child:after {
+        @include media($small) {
+          content: "";
+        }
+      }
+    }
+  }
+
+  .details {
+    @include span-columns(10);
+    min-height: 165px;
+    padding-left: $small-spacing;
+    padding-bottom: $small-spacing;
+    @include media($small) {
+      @include span-columns(6);
+      min-height: 0;
+      padding-left: 0;
+    }
+  }
+
+  ul.categories, ul.tags {
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      font-family: $alt-font-family;
+      font-size: 0.875em;
+      color: $medium-dark-gray;
+      text-transform: uppercase;
+      &:after {
+        content: ",";
+      }
+      &:last-child:after {
+        content: "";
+      }
+      a {
+        color: $medium-dark-gray;
+        &:hover {
+          color: $red;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  ul.categories li {
+    font-weight: 800;
+  }
+  ul.tags li {
+    &:after {
+      content: ", ";
+    }
+    &:first-child:before {
+      @extend %square-bullet;
+      margin: 0 7px 0 4px;
+    }
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
+
+.calendar-filters {
+  padding-bottom: 1rem;
+  &__label {
+    font-weight: 800;
+  }
+}
+
+.tag-link {
+  text-transform: uppercase;
+  &:after {
+    content: ", ";
+  }
+  &:last-child:after {
+    content: "";
+  }
+}
+
+body.single-ai1ec_event {
+  .page-content {
+    .time-location {
+      margin-bottom: $small-spacing;
+      time {
+        display: block;
+        + address:before {
+          display: none;
+        }
+        strong {
+          text-transform: uppercase;
+        }
+      }
+    }
+    time {
+      .times {
+        display: inline-block;
+        text-transform: none;
+        &:before {
+          @extend %square-bullet;
+          margin: 0 8px 0 4px;
+        }
+      }
+      + address:before {
+        @extend %square-bullet;
+        margin: 0 8px 0 4px;
+      }
+    }
+    .description {
+      margin-bottom: $base-spacing;
+    }
+    .categories, .tags, .audiences {
+      li {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

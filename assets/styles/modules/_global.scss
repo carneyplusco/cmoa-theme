@@ -1,0 +1,165 @@
+// INTERIOR MODULES - Specific styles that can be used anywhere.  Break bigger modules into their own file.
+////////////////////////////////////////////////////////////////////////////////
+.demo-nav {
+  margin-bottom: $large-spacing;
+  font-size: 1.5em;
+  padding-top: 80px;
+
+
+  a{
+    margin-bottom: $base-spacing;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+.center {
+  text-align: center;
+}
+
+.color {
+  color: $action-color;
+}
+
+.hide-small {
+  @include media($nav-break) {
+    display: none !important;
+  }
+}
+
+.hide-large {
+  display: none;
+  @include media($nav-break) {
+    display: block;
+  }
+}
+
+section {
+  // overflow: hidden;
+}
+
+img.alignleft, figure.alignleft {
+  float: left;
+  margin: $small-spacing $base-spacing $base-spacing 0;
+  @include media($small) {
+    float: none;
+    margin-right: 0;
+  }
+}
+
+img.alignright, figure.alignright {
+  float: right;
+  margin: $small-spacing 0 $base-spacing $base-spacing;
+  @include media($small) {
+    float: none;
+    margin-left: 0;
+  }
+}
+
+
+.alert {
+  background: #fff;
+  padding: $base-spacing;
+  text-align: center;
+  border-bottom: $base-border;
+  display: none;
+}
+// style guide stuff
+////////////////////////////////////////////////////////////////////////////////
+
+.sg-color-swatch {
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 100%;
+  border: solid 1px rgba(#000, .2);
+  font-size: .8em;
+  text-align: center;
+  padding-top: 26px;
+
+  &:nth-child(2) {
+    background: $light-gray;
+  }
+  &:nth-child(3) {
+    background: $medium-gray;
+  }
+  &:nth-child(4) {
+    color: #fff;
+    background: $dark-gray;
+  }
+  &:nth-child(5) {
+    color: #fff;
+    background: #000;
+  }
+
+  &:nth-child(6) {
+    color: #fff;
+    background: $dark-red;
+  }
+
+  &:nth-child(7) {
+    color: #fff;
+    background: $red;
+  }
+
+  &:nth-child(8) {
+    background: $teal;
+  }
+
+  &:nth-child(9) {
+    background: $gold;
+  }
+
+  &:nth-child(10) {
+    @extend %inverse;
+    background: $cadet;
+  }
+}
+
+.posts-navigation {
+  .nav-previous {
+    float: left;
+  }
+  .nav-next {
+    float: right;
+  }
+}
+
+.fpo-bg:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url("../images/fpo.jpg");
+  background-size: cover;
+  content: "";
+  z-index: -1;
+  opacity: .2;
+}
+
+
+// From https://codex.wordpress.org/CSS
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	clip: auto !important;
+	color: inherit;
+	background-color: inherit;
+	display: inline-block;
+	height: auto;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
